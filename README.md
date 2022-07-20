@@ -20,3 +20,7 @@ paru -S $(grep -Ev '^#|^$' nescafe-dotfiles/packagelist.txt) --needed
 ````
 sudo cp -r nescafe-dotfiles/lightdm /etc/lightdm
 ````
+8. Sync all of the newly installed fonts
+````
+fc-cache -fv
+````
