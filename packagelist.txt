@@ -101,7 +101,6 @@ flashfocus-git
 qbittorrent
 gpick
 tldr
-tealdeer
 git
 groff
 gzip
