@@ -24,3 +24,5 @@ sudo cp -r nescafe-dotfiles/lightdm /etc/lightdm
 ````
 fc-cache -fv
 ````
+
+- [ ] start and enable lightdm service once I have got it set up
