@@ -2,13 +2,14 @@
 ````
 sudo pacman -S git
 ``````
-2. Setup your mirrors so you ge the fastest an closes tones (if this hasn't been done already)
+2. Install reflector if you want to setup your pacman download mirrors based on region and download rate. 
+
 ````
 sudo pacman -S reflector
 ``````
-
-- [ ] create reflector command to setup repos
-3. clone repo
+3. Setup your mirrors based on your country, https, and transfer rate
+- [ ] create reflector command
+4. clone repo
 - [ ] create a script that installs rustup and sets "rustup default stable"
 5. Install paru using rustup
 6. install all the packages in the package file. The grep part excludes the comments and the whitespace in the file. 
