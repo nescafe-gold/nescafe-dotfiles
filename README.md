@@ -18,5 +18,5 @@ paru -S $(grep -Ev '^#|^$' nescafe-dotfiles/packagelist.txt) --needed
 ````
 7. Copy lightdm settings. Lightdm is the display manager (login manager)
 ````
-sudo cp nescafe-dotfiles/lightdm /etc/lightdm
+sudo cp -r nescafe-dotfiles/lightdm /etc/lightdm
 ````
