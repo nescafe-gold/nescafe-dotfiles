@@ -126,7 +126,6 @@ rofi-greenclip
 vi
 wget
 xclip
-xdg-users-dirs
 xorg-docs
 xorg-fonts-100dpi
 xorg-fonts-75dpi
