@@ -130,7 +130,6 @@ xorg-fonts-100dpi
 xorg-fonts-75dpi
 
 
-ttc-iosevka
 ttf-arphic-uming
 ttf-consolas-ligaturized
 ttf-fira-code
