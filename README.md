@@ -98,7 +98,7 @@ The way I move the zshrc and other programs' config files is through the use of 
 > **For example, the .zshenv file has only the following variable inside:**
 >ZDOTDIR=$HOME/.config/zsh
 >
->This variable is telling zsh to look inside ~/.config/zsh for the .zshenv, .zshrc, etc. file. 
+>This variable is telling zsh to look inside ~/.config/zsh for the .zshenv, .zshrc, etc. file(s). 
 
 1. Copy the zshenv file from this repo into your home directory
 ````
