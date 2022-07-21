@@ -1,0 +1,30 @@
+# Copy output of last command
+#Turn this into a function that copies x amount of lines but 2 if parameter isn't used
+alias c='"$(history | tail -2 | sed "s/  [0-9]*  //;2d")" > /tmp/cmdoutput && cat /tmp/cmdoutput | xsel -b && notify-send "Terminal" "Ouput Copied"'
+
+# file management
+alias ls='exa --icons --group-directories-first'
+#Create script that reads the command given to it. Uses awk twice: once to get the final path and again to get the second to last value so that I can ls the destination
+
+#or a script that gets gets the output of the command, parses it somehow and the ls' the directories. use uniq, amongst other methods.
+
+alias ld='lsd -hA --group-dirs first'
+
+
+alias mv='mv -v'
+alias cp='cp -vr'
+alias rm='rm -vr'
+alias grep='grep --color=auto'
+alias cat="bat --color always --plain"
+alias mkdir="mkdir -p"
+
+# Trash-cli commands to manage recycling bin
+alias trp='trash-put'
+alias tre='trash-empty'
+alias trl='trash-list'
+alias trr='trash-restore'
+alias trm='trash-rm'
+
+# Update Mirrors based on country and fastest download speed
+alias mirror-update='sudo reflector --verbose -c "United Kingdom" --sort rate --save /etc/pacman.d/mirrorlist'
+

@@ -1,13 +1,9 @@
-## ░▀▀█░█▀▀░█░█░█▀▄░█▀▀
-## ░▄▀░░▀▀█░█▀█░█▀▄░█░░
-## ░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀
-##
-## rxyhn's Z-Shell configuration
-## https://github.com/rxyhn
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
 while read file
 do 
-  source "$ZDOTDIR/$file.zsh"
+  source "$ZDOTDIR/cfg_parts/$file.zsh"
 done <<-EOF
 theme
 env
@@ -17,6 +13,8 @@ options
 plugins
 keybinds
 prompt
+autocomplete
+vim_mode
 EOF
 
 # vim:ft=zsh:nowrap
