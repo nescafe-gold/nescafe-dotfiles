@@ -120,7 +120,6 @@ networkmanager
 xorg
 numlockx
 paclabel-git
-polkit-dumb-agent-git
 rofi-greenclip
 vi
 wget
@@ -181,3 +180,25 @@ virt-manager
 bridge-utils
 edk2-ovmf
 
+wezterm 
+lxappearance-gtk3 
+jq 
+inotify-tools 
+polkit-gnome 
+xdotool 
+xclip 
+gpick 
+ffmpeg 
+blueman 
+redshift 
+pamixer 
+brightnessctl 
+feh 
+maim 
+mpv 
+mpd 
+mpc 
+mpdris2
+python-mutagen
+ncmpcpp 
+playerctl
