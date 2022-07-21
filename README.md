@@ -108,15 +108,15 @@ cp .nescafe-dotfiles/.zshenv ~/
 ### ZSH Config
 I have configured the config so that it is split up into multiple parts.
 
-The **.zshrc** file is setup like an index file that just sources all of the other parts of the ZSH config located in **cfg_parts**.
+The **.zshrc** file is setup like an index file that sources files in the **cfg_parts** directory. Each file in this directory is a segmenmt of the zsh config that I split up for modularity and the index file (**.zshrc**) puts the parts together in the necessary order.
 
-The **aliases** directory is where multiple types of aliases are stored into more split up files, such as **applicationaliases** and **gitaliases**. These parts are already sourced by the **aliases.zsh** file that is in **cfg_parts**.
+The **aliases** directory is where multiple types of aliases are stored. Again, each type of alias is split up into its own file, such as **applicationaliases** and **gitaliases**. These aliases are sourced by the **aliases.zsh** file located in **cfg_parts**.
 
-The **plugins** directory is where plugins not managed by Pacman and Paru are stored. At the moment **z.lua** is the only plugin that fits this category.
+The **plugins** directory is where plugins not managed by Pacman and Paru are stored. At the moment **z.lua** is the only plugin that fits this category. The plugins in this directory are sourced by the **plugins.zsh** file located in **cfg_parts**.
 
 The **zsh-completions** directory is full of files that contain autocomplete data.
 
-**history** is the history file. This file is where all of your cmmands are stored. This allows you to scroll through the history in your terminal by using the arrow keys.
+**history** is the history file. This file is where all of your commands are stored. This allows you to scroll through the history in your terminal by using the arrow keys.
 
 1. Feel free to edit the files in the ZSH config directory before you copy the configuration. To copy the ZSH configuration run the following command: 
 ````
