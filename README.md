@@ -19,7 +19,8 @@ git clone https://nescafe-gold/nescafe-dotfiles.git
 ````
 ## Install Paru
 Paru is my prefferred package manager for the AUR (Arch User Repository). I want to use rustup over the rust package because it allows me to use multiple rust builds, such as the "nightly" (development) build.
-> **:memo: Note: Why install Rust?**  
+> **:memo: Note: 
+> Why install Rust?**  
 > Rust is a programming language that many apps are written in. The main reason to switch to other builds like the development one is to take advantage of new, and possibly unstable, features that haven't yet made it to the stable rust package or build.
 >
 > **changing rust builds is only possible with rustup, which is the reason I use it over rust.**
@@ -41,7 +42,8 @@ Change directory to the paru repo we just git cloned:
 cd paru
 ````
 Build the package in the repo. Make sure that you chose the rustup option when it asks, if that is what you want:
-> **:warning: Important: If you chose rustup over rust then make sure you chose rustup when promoted** 
+> **:warning: Important: 
+> If you chose rustup over rust then make sure you chose rustup when promoted** 
 ````
 makepkg -si
 ````
