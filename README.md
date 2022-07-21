@@ -78,3 +78,30 @@ cp -r nescafe-dotfiles/fonts/* ~/.local/share/fonts
 fc-cache -fv
 ````
 
+## Setting up your .config file
+- [ ] Make instructions on making sure your shell is set to zsh 
+1. Copy the config folders found in the repos to your .config folder 
+````
+cp -r nescafe-dotfiles/config/* ~/.config
+````
+
+## Setting up ZSH
+
+### zshenv
+First you will need to copy the zshenv file over to your home folder. 
+
+Usually your .zshrc and the plugins (which are just .zsh scripts that are sourced in the .zshrc) would also go directly into your home folder. However, I try to keep my home folder de-cluttered, when I can be bothered. Therefore, my zshrc and plugins are located in ~/.config/zsh.
+
+The reason why the .zshenv file is directly in the home folder is because without it being there, it wouldn't be possible to move a config file/directory to a different location than what the program is expecting. 
+
+The way I move the zshrc and other programs' config files is through the use of environment variables that were programmed into the applications themselces. These variables are usually just a path to another location of the config file/directory. For example, the .zshenv file has only the following variable inside:
+
+```` 
+ZDOTDIR=$HOME/.config/zsh
+````
+This variable is telling zsh to look inside ~/.config/zsh for the .zshenv, .zshrc, etc. file. 
+
+1. Copy the zshenv file from this repo into your home directory
+````
+cp .nescafe-dotfiles/.zshenv ~/
+````
