@@ -1,0 +1,18 @@
+alias v='lvim'
+alias m='mpv'
+alias trc='transmission-remote-cli'
+alias t='tremc'
+alias trs='transmission-rss'
+alias xup='xrdb .Xresources'
+
+# pacman aliases
+alias pacs="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
+alias pars="paru -Slq | fzf -m --preview 'cat <(paru -Si {1}) <(paru -Fl {1} | awk \"{print \$2}\")' | xargs -ro  paru -S"
+alias pacr="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+alias pman='sudo pacman'
+
+alias ctar='tar -zcvf' # mtar <archive_compress>
+alias xtar='tar -zxvf' # utar <archive_decompress> <file_list>
+alias z='zip -r' # z <archive_compress> <file_list>
+alias uz='unzip' # uz <archive_decompress> -d <dir>
+alias wifi="nmtui-connect"
