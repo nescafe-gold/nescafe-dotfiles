@@ -14,8 +14,8 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/de
 source /usr/share/doc/find-the-command/ftc.zsh noprompt quiet
 
 # FZF Plugins
-source /usr/share/zsh/plugins/fzf/completion.zsh
-source /usr/share/zsh/plugins/fzf/key-bindings.zsh
+source $XDG_CONFIG_HOME/zsh/plugins/fzf/completion.zsh
+source $XDG_CONFIG_HOME/zsh/plugins/fzf/key-bindings.zsh
 source /usr/share/fzf/fzf-extras.zsh
 
 #z.lua
