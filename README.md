@@ -19,9 +19,8 @@ git clone https://nescafe-gold/nescafe-dotfiles.git
 ````
 ## Install Paru
 Paru is my prefferred package manager for the AUR (Arch User Repository). I want to use rustup over the rust package because it allows me to use multiple rust builds such as "nightly", which is the development build.
- ** Note: Aliens are coming.**  
+> **:memo: Note: Why install Rust?**  
 > Rust is a programming language that many apps are written in. The main reason to switch to other builds like the development one is to take advantage of new (possibly unstable) features that haven't yet made it to the stable rust package or build.
-
 
 1. Install rustup (replace "rustup" with "rust" if you don't want to use rustup).
 ````
@@ -46,9 +45,9 @@ makepkg -si
 ````
 
 ## Install all of your packages
-The package list in this repo contains all of the packages that I like to install. Feel free to edit this list as you wish before installing from the list. You can add comments by starting the line with a # and you can add blank lines to seperate blocks of packages.
+The package list in this repo contains all of the packages that I like to install. Feel free to edit this list as you wish before installing from the list. You can add comments by starting the line with a # and you can add blank lines to separate blocks of packages.
 
-The command below will will install everything seperated by a newline. The grep part of the command is excluding all of the comments that are prefixed with a # and it is excluding all blank lines.
+The command below will will install everything separated by a newline. The grep part of the command is excluding all of the comments that are prefixed with a # and it is excluding all blank lines.
 ````
 paru -S $(grep -Ev '^#|^$' nescafe-dotfiles/packagelist.txt) --needed
 ````
