@@ -104,3 +104,21 @@ The way I move the zshrc and other programs' config files is through the use of 
 ````
 cp .nescafe-dotfiles/.zshenv ~/
 ````
+
+### ZSH Config
+I have configured the config so that it is split up into multiple parts.
+
+The **.zshrc** file is setup like an index file that just sources all of the other parts of the ZSH config located in **cfg_parts**.
+
+The **aliases** directory is where multiple types of aliases are stored into more split up files, such as **applicationaliases** and **gitaliases**. These parts are already sourced by the **aliases.zsh** file that is in **cfg_parts**.
+
+The **plugins** directory is where plugins not managed by Pacman and Paru are stored. At the moment **z.lua** is the only plugin that fits this category.
+
+The **zsh-completions** directory is full of files that contain autocomplete data.
+
+**history** is the history file. This file is where all of your cmmands are stored. This allows you to scroll through the history in your terminal by using the arrow keys.
+
+1. Feel free to edit the files in the ZSH config directory before you copy the configuration. To copy the ZSH configuration run the following command: 
+````
+cp -r nescafe-dotfiles/config/zsh ~/.config
+````
