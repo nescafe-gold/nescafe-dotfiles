@@ -1549,3 +1549,77 @@ z.lua
 : 1658387638:0;ls .config/zsh/
 : 1658387708:0;rm -r projectsNstuff/dotfiles/nescafe-dotfiles/config/zsh
 : 1658387715:0;cp -r .config/zsh projectsNstuff/dotfiles/nescafe-dotfiles/config/
+: 1658387722:0;cd projectsNstuff/dotfiles/nescafe-dotfiles
+: 1658387779:0;ga config/broot/
+: 1658387800:0;gc config/broot/ -m "broot config"
+: 1658387822:0;ga -A
+: 1658387870:0;gc -A -m "config overhaul"
+: 1658387889:0;gc -m "config overhaul"
+: 1658387951:0;rm config/zsh/.zhistory
+: 1658387968:0;rm config/zsh/.zcompdump
+: 1658388012:0;rm ~/.config/zsh/.zhistory
+: 1658388069:0;ga -A && gc -m "removed unneeded hidden zsh files"
+: 1658388080:0;gpu
+: 1658388086:0;v notes
+: 1658388161:0;cd projectsNstuff/dotfiles/nescafe-dotfiles
+: 1658388164:0;v README.md
+: 1658388435:0;ga README.md && gc -m "correct spelling and add text block"
+: 1658388439:0;gpu
+: 1658388490:0;v README.md
+: 1658388520:0;ga README.md && gc -m "corrected spelling"
+: 1658388525:0;gpu
+: 1658388751:0;v README.md
+: 1658388836:0;ls .config/zsh
+: 1658389038:0;ls .config/zsh/aliases
+: 1658389433:0;v .config/zsh/bookmarks
+: 1658389439:0;rm terrainbook.pdf
+: 1658389447:0;rm .config/zsh/bookmarks
+: 1658389468:0;rm config/zsh/bookmarks
+: 1658389745:0;ga config/zsh/bookmarks
+: 1658389758:0;gc -m "removed zsh bookmarks"
+: 1658389786:0;ga README.md && gc -m "corrected spelling and finished ZSH section"
+: 1658389793:0;gpu
+: 1658389803:0;v notes
+: 1658389890:0;v README.md
+: 1658390361:0;ga README.md && gc -m "corrected spelling and punctuation in ZSH config section"
+: 1658390365:0;gpu
+: 1658390481:0;v README.md
+: 1658390680:0;ga README.md && gc -m "corrected spelling and punctuation in ZSH config section"
+: 1658390686:0;gpu
+: 1658393210:0;v README.md
+: 1658393330:0;v .Xresources
+: 1658393636:0;ls config/awesome/modules/bling
+: 1658393710:0;ls .firefox
+: 1658393823:0;v .mozilla/firefox/profiles.ini
+: 1658393839:0;ls .mozilla/firefox/
+: 1658393872:0;rm -r .mozilla
+: 1658393885:0;fd mozilla
+: 1658393911:0;sudo pacman -Syu firefox
+: 1658393959:0;sudo pacman -Rns firefox
+: 1658393962:0;sudo pacman -Syu firefox
+: 1658394276:0;cd ..
+: 1658394282:0;rm -r dotfiles
+: 1658394286:0;rm -rf dotfiles
+: 1658394302:0;git clone --depth 1 --recurse-submodules https://github.com/rxyhn/dotfiles.git && cd dotfiles && git submodule update --remote --merge
+: 1658394376:0;ls
+: 1658394597:0;mkdir .mozilla/firefox/jg6fx68v.default-release/chrome
+: 1658394635:0;cp misc/themes/firefox/* ~/.mozilla
+: 1658394664:0;rm ~/.mozilla/*.css
+: 1658394698:0;cp misc/themes/firefox/* ~/.mozilla/firefox/jg6fx68v.default-release/chrome
+: 1658394910:0;v .mozilla/firefox/jg6fx68v.default-release/chrome/userContent.css
+: 1658395118:0;rm -r projectsNstuff/dotfiles/nescafe-dotfiles/config/awesome
+: 1658395161:0;cp -r projectsNstuff/dotfiles/dotfiles/config/awesome/ projectsNstuff/dotfiles/nescafe-dotfiles/config/
+: 1658395231:0;cd ..
+: 1658395236:0;cd nescafe-dotfiles/
+: 1658395256:0;ga A && commit -m "awesome config"
+: 1658395262:0;ga -A && commit -m "awesome config"
+: 1658395277:0;ga -A && gc -m "awesome config"
+: 1658395282:0;gpu
+: 1658395290:0;v notes
+: 1658396315:0;v .config/zsh/cfg_parts/plugins.zsh
+: 1658396348:0;sudo mount /dev/sda1 data
+: 1658396417:0;mkdir .config/zsh/plugins/fzf
+: 1658396790:0;gcl https://github.com/junegunn/fzf.git
+: 1658396826:0;cp fzf/shell/*.zsh ~/.config/zsh/plugins/fzf
+: 1658396872:0;rm -rf ~/projectsNstuff/dotfiles/nescafe-dotfiles/config/zsh
+: 1658396905:0;cp -r .config/zsh ~/projectsNstuff/dotfiles/nescafe-dotfiles/config/
