@@ -18,7 +18,10 @@ sudo pacman -S reflector
 git clone https://nescafe-gold/nescafe-dotfiles.git
 ````
 ## Install Paru
-Paru is my preffered package manager for the AUR (Arch User Repository). I want to use rustup over the rust package for another package on my system, therefore I chose to install rust using rustup over rust.
+Paru is my prefferred package manager for the AUR (Arch User Repository). I want to use rustup over the rust package because it allows me to use multiple rust builds such as "nightly", which is the development build.
+ ** Note: Aliens are coming.**  
+> Rust is a programming language that many apps are written in. The main reason to switch to other builds like the development one is to take advantage of new (possibly unstable) features that haven't yet made it to the stable rust package or build.
+
 
 1. Install rustup (replace "rustup" with "rust" if you don't want to use rustup).
 ````
