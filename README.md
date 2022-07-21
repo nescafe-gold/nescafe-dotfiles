@@ -28,7 +28,7 @@ Paru is my prefferred package manager for the AUR (Arch User Repository). I want
 ````
 sudo pacman -S rustup
 ````
-2. If you chose to install rustup, then you need to choose a default build. The choice of builds is the advantage of rustup. For now I will choose the stable build.
+2. If you chose to install rustup, then you need to choose a default build. For now I will choose the stable build.
 ````
 rustup default stable
 ````
