@@ -22,7 +22,7 @@ Paru is my prefferred package manager for the AUR (Arch User Repository). I want
 > **:memo: Note: Why install Rust?**  
 > Rust is a programming language that many apps are written in. The main reason to switch to other builds like the development one is to take advantage of new, and possibly unstable, features that haven't yet made it to the stable rust package or build.
 >
-> changing builds is only possible with rustup, which is the reason I use it over rust.
+> **changing rust builds is only possible with rustup, which is the reason I use it over rust.**
 
 1. Install rustup (replace "rustup" with "rust" if you don't want to use rustup).
 ````
