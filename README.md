@@ -118,7 +118,4 @@ The **zsh-completions** directory is full of files that contain autocomplete dat
 
 **history** is the history file. This file is where all of your commands are stored. This allows you to scroll through the history in your terminal by using the arrow keys.
 
-1. Feel free to edit the files in the ZSH config directory before you copy the configuration. To copy the ZSH configuration run the following command: 
-````
-cp -r nescafe-dotfiles/config/zsh ~/.config
-````
+1. You already copied the ZSH config to your .config earlier, when you copied the config directory located in this repo. As with any of the config files, feel free to edit them to your liking.
