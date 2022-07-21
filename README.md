@@ -42,9 +42,9 @@ Change directory to the paru repo we just git cloned:
 cd paru
 ````
 Build the package in the repo. Make sure that you chose the rustup option when it asks, if that is what you want:
-> **:warning: Important:
+> **:warning: Important:**
 >
-> If you chose rustup over rust then make sure you chose rustup when promoted** 
+> **If you chose rustup over rust then make sure you chose rustup when promoted** 
 ````
 makepkg -si
 ````
