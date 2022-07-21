@@ -23,7 +23,6 @@ Paru is my preffered package manager for the AUR (Arch User Repository). I want 
 1. Install rustup (replace "rustup" with "rust" if you don't want to use rustup).
 ````
 sudo pacman -S rustup
-
 ````
 2. If you chose to install rustup, then you need to choose a default build. The choice of builds is the advantage of rustup. For now I will choose the stable build.
 ````
