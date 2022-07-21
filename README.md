@@ -32,16 +32,15 @@ sudo pacman -S rustup
 ````
 rustup default stable
 ````
-3. Install paru using rustup
-git clone the paru repo that contains the paru PKGFILE:
+3. Git clone the Paru repo, which contains the paru PKGFILE:
 ````
 git clone https://aur.archlinux.org/paru.git
 ````
-change directory to the paru repo we just git cloned:
+Change directory to the paru repo we just git cloned:
 ````
 cd paru
 ````
-build the package in the repo. Make sure that you chose the rustup option when it asks, if that is what you want:
+Build the package in the repo. Make sure that you chose the rustup option when it asks, if that is what you want:
 ````
 makepkg -si
 ````
