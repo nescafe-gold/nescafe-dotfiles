@@ -94,12 +94,11 @@ Usually your .zshrc and the plugins (which are just .zsh scripts that are source
 
 The reason why the .zshenv file is directly in the home folder is because without it being there, it wouldn't be possible to move a config file/directory to a different location than what the program is expecting. 
 
-The way I move the zshrc and other programs' config files is through the use of environment variables that were programmed into the applications themselces. These variables are usually just a path to another location of the config file/directory. For example, the .zshenv file has only the following variable inside:
-
-```` 
-ZDOTDIR=$HOME/.config/zsh
-````
-This variable is telling zsh to look inside ~/.config/zsh for the .zshenv, .zshrc, etc. file. 
+The way I move the zshrc and other programs' config files is through the use of environment variables that were programmed into the applications themselves. These variables are usually just a path to another location of the config file/directory. 
+> **For example, the .zshenv file has only the following variable inside:**
+>ZDOTDIR=$HOME/.config/zsh
+>
+>This variable is telling zsh to look inside ~/.config/zsh for the .zshenv, .zshrc, etc. file. 
 
 1. Copy the zshenv file from this repo into your home directory
 ````
