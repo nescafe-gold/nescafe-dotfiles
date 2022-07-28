@@ -45,11 +45,19 @@ wmctrl
 xclip 
 xdg-user-dirs 
 alacritty
+sxiv 
+zathura 
+zathura-djvu
+zathura-pdf-mupdf
+downgrade
+github-cli
+
 
 #daemon that delivers ACPI events (I use it for battery events for my battery widget)
 acpi
 acpid
 acpi_call
+
 # CLI tool for battery widget
 upower
 
@@ -62,8 +70,9 @@ pipewire-pulse
 pipewire-alsa
 pipewire-jack
 pipewire-zeroconf
+
 #Music
-#Server-side application for plying music
+#Server-side application for playing music
 mpd
 mpdris2
 
@@ -185,9 +194,10 @@ ffmpeg
 blueman 
 pamixer 
 python-mutagen
-
-
-#fzf-extras
+fzf-extras
 fasd
 mlocate
-zinit-git
+haveged
+python-pip 
+archlinux-keyring
+ntfs-3g
