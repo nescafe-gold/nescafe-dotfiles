@@ -15,7 +15,7 @@ sudo pacman -S reflector
 ## Clone repo
 
 ````
-git clone https://nescafe-gold/nescafe-dotfiles.git
+git clone https://github.com/nescafe-gold/nescafe-dotfiles.git
 ````
 ## Install Paru
 Paru is my prefferred package manager for the AUR (Arch User Repository). I want to use rustup over the rust package because it allows me to use multiple rust builds, such as the "nightly" (development) build.
@@ -127,6 +127,8 @@ The **zsh-completions** directory is full of files that contain autocomplete dat
 1. You already copied the ZSH config to your .config earlier, when you copied the config directory located in this repo. As with any of the config files, feel free to edit them to your liking.
 
 
+
+Notes:
 add programs that you want to start with the x session to .xprofile
 
 
@@ -157,10 +159,6 @@ dingo: ## Install dingo Google DNS over HTTPS
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
 
-sxiv 
-zathura 
-downgrade
-github-cli
 
 
 
