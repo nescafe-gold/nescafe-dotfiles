@@ -52,10 +52,16 @@ makepkg -si
 ## Install all of your packages
 The package list in this repo contains all of the packages that I like to install. Feel free to edit this list as you wish before installing from the list. You can add comments by starting the line with a # and you can add blank lines to separate blocks of packages.
 
-The command below will will install everything separated by a newline. The grep part of the command is excluding all of the comments that are prefixed with a # and it is excluding all blank lines.
+The command below will install everything separated by a newline. The grep part of the command is excluding all of the comments that are prefixed with a # and it is excluding all blank lines.
 ````
 paru -S $(grep -Ev '^#|^$' nescafe-dotfiles/packagelist.txt) --needed
 ````
+
+## Install Config Files
+
+git clone --recurse-submodules https://github.com/rxyhn/dotfiles.git ~/
+
+cd dotfiles && git submodule update --remote --merge
 
 ## Setup the LightDM Display Manager
 I chose to install LightDM as my display manager (login manager). My settings are extremely basic because I've never riced a display manager before. I will update the settings over time.
@@ -102,7 +108,7 @@ The way I move the zshrc and other programs' config files is through the use of 
 
 1. Copy the zshenv file from this repo into your home directory
 ````
-cp .nescafe-dotfiles/.zshenv ~/
+cp nescafe-dotfiles/.zshenv ~/
 ````
 
 ### ZSH Config
@@ -119,3 +125,49 @@ The **zsh-completions** directory is full of files that contain autocomplete dat
 **history** is the history file. This file is where all of your commands are stored. This allows you to scroll through the history in your terminal by using the arrow keys.
 
 1. You already copied the ZSH config to your .config earlier, when you copied the config directory located in this repo. As with any of the config files, feel free to edit them to your liking.
+
+
+add programs that you want to start with the x session to .xprofile
+
+
+
+sudo pacman -S rustup
+rustup default stable
+rustup component add rls rust-analysis rust-src
+
+
+#localhostssl: # Set ssl for localhost
+mkcert -install
+mkcert localhost
+ 
+
+#remotedesktop: ## Install remotedesktop
+remmina freerdp libvncserver
+
+
+#dnsmasq
+#sudo pacman -S dnsmasq
+sudo ln -vsf ${PWD}/etc/$@/resolv.$@.conf /etc/resolv.$@.conf
+sudo ln -vsf ${PWD}/etc/$@/$@.conf /etc/$@.conf
+sudo mkdir -p /etc/NetworkManager
+sudo ln -vsf {${PWD},}/etc/NetworkManager/NetworkManager.conf
+
+
+dingo: ## Install dingo Google DNS over HTTPS
+	$(PACMAN) $@
+	$(SYSTEMD_ENABLE) $@.service
+
+sxiv 
+zathura 
+downgrade
+github-cli
+
+
+
+## Add blackarch 
+#cd /tmp
+#curl -O https://blackarch.org/strap.sh
+#chmod +x strap.sh
+#./strap.sh
+#rm ./strap.sh
+#cd
