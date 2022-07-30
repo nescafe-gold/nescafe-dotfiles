@@ -201,3 +201,11 @@ haveged
 python-pip 
 archlinux-keyring
 ntfs-3g
+
+firefox-extension-https-everywhere 
+entr 
+dbus-broker 
+wireplumber 
+firefox-ublock-origin
+# required by screenshot tool
+colord

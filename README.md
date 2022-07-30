@@ -49,13 +49,60 @@ Build the package in the repo. Make sure that you chose the rustup option when i
 makepkg -si
 ````
 
-## Install all of your packages
+# Installing all of the packages
 The package list in this repo contains all of the packages that I like to install. Feel free to edit this list as you wish before installing from the list. You can add comments by starting the line with a # and you can add blank lines to separate blocks of packages.
 
 The command below will install everything separated by a newline. The grep part of the command is excluding all of the comments that are prefixed with a # and it is excluding all blank lines.
 ````
 paru -S $(grep -Ev '^#|^$' nescafe-dotfiles/packagelist.txt) --needed
 ````
+
+# Setting up environment variables
+You should already have zsh installed as it is the default on arch and if you used my install script.
+
+First you will need to copy the zshenv file over to your home folder. 
+
+Usually your .zshrc and the plugins (which are just .zsh scripts that are sourced in the .zshrc) would also go directly into your home folder. However, I try to keep my home folder de-cluttered, when I can be bothered. Therefore, my zshrc and plugins are located in ~/.config/zsh.
+
+The reason why the .zshenv file is directly in the home folder is because without it being there, it wouldn't be possible to move a config file/directory to a different location than what the program is expecting. 
+
+The way I move the zshrc and other programs' config files is through the use of environment variables that were programmed into the applications themselves. These variables are usually just a path to another location of the config file/directory. 
+> **For example, the .zshenv file has only the following variable inside:**
+>ZDOTDIR=$HOME/.config/zsh
+>
+>This variable is telling zsh to look inside ~/.config/zsh for the .zshenv, .zshrc, etc. file(s). 
+
+1. Copy the config file, which contains the zsh configuration inside of $HOME/.config/zshrc, to your home directory. The zsh configuration folder contains a file where I define all of my environment variables, it is located in $HOME/.config/zsh/cfg_parts/env.zsh
+
+NOTE TO SELF. ADD BLING MODULE ETC AS SUBMODULES
+```
+git clone --recurse-submodules https://github.com/nescafe-gold/nescafe-dotfiles.git ~/
+```
+```
+cd dotfiles && git submodule update --remote --merge
+
+```
+
+
+2. Source your szhenv file, so that the environment variables defined there are applied to your current zsh shell session
+```
+source $HOME/.zshenv
+```
+Now that the ZDOTFIR variable points to $HOME/.config/zsh, we can source the .zshrc, which will source all of the other files in $HOME/.config/zsh/cfg_parts
+```
+source $HOME/.config/.zshrc
+```
+
+# Creating Directories Defined in env File
+```
+mkdir -p $HOME.local/share/fonts XDG_DATA_HOME XDG_CACHE_HOME XDG_CONFIG_HOME GEM_PATH GEM_SPEC_CACHE NPM_CONFIG_USERCONFIG GNUPGHOME _JAVA_OPTIONS GTK2_RC_FILES ZDOTDIR CARGO_HOME FFF_TRASH GEM_HOME GOPATH NPM_CONFIG_USERCONFIG NPM_PACKAGES NODE_PATH $HOME/.cargo/bin $HOME/.local.bin XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME XDG_STATE_HOME XDG_CONFIG_DIRS XDG_DATA_DIRS XDG_RUNTIME_DIR XDG_DESKTOP_DIR XDG_DOWNLOAD_DIR XDG_TEMPLATES_DIR XDG_PUBLICSHARE_DIR XDG_DOCUMENTS_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEOS_DIR FFF_TRASH MANPATH INFOPATH GNUPGHOME GTK2_RC_FILES
+```
+
+
+
+
+
+
 
 ## Install Config Files
 
@@ -88,28 +135,12 @@ fc-cache -fv
 - [ ] Make instructions on making sure your shell is set to zsh 
 1. Copy the config folders found in the repos to your .config folder 
 ````
-cp -r nescafe-dotfiles/config/* ~/.config
+cp -r nescafe-dotfiles/.config/* ~/.config
 ````
 
 ## Setting up ZSH
 
-### zshenv
-First you will need to copy the zshenv file over to your home folder. 
 
-Usually your .zshrc and the plugins (which are just .zsh scripts that are sourced in the .zshrc) would also go directly into your home folder. However, I try to keep my home folder de-cluttered, when I can be bothered. Therefore, my zshrc and plugins are located in ~/.config/zsh.
-
-The reason why the .zshenv file is directly in the home folder is because without it being there, it wouldn't be possible to move a config file/directory to a different location than what the program is expecting. 
-
-The way I move the zshrc and other programs' config files is through the use of environment variables that were programmed into the applications themselves. These variables are usually just a path to another location of the config file/directory. 
-> **For example, the .zshenv file has only the following variable inside:**
->ZDOTDIR=$HOME/.config/zsh
->
->This variable is telling zsh to look inside ~/.config/zsh for the .zshenv, .zshrc, etc. file(s). 
-
-1. Copy the zshenv file from this repo into your home directory
-````
-cp nescafe-dotfiles/.zshenv ~/
-````
 
 ### ZSH Config
 I have configured the config so that it is split up into multiple parts.
@@ -126,7 +157,13 @@ The **zsh-completions** directory is full of files that contain autocomplete dat
 
 1. You already copied the ZSH config to your .config earlier, when you copied the config directory located in this repo. As with any of the config files, feel free to edit them to your liking.
 
+### Setting up Xresources
 
+The file .Xresources is a config file for  colorscheme information
+
+```
+cp nescafe-dotfiles/.Xresources ~/
+```
 
 Notes:
 add programs that you want to start with the x session to .xprofile
@@ -169,3 +206,11 @@ dingo: ## Install dingo Google DNS over HTTPS
 #./strap.sh
 #rm ./strap.sh
 #cd
+
+sed change builddir in makepkg.conf
+
+git clone nerd fonts and remove iosevka with sed
+
+
+cp -r nsescafe/config/broot .config/
+
