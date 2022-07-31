@@ -209,3 +209,5 @@ wireplumber
 firefox-ublock-origin
 # required by screenshot tool
 colord
+prettier
+lxappearance-gtk3

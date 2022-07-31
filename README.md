@@ -165,52 +165,21 @@ The file .Xresources is a config file for  colorscheme information
 cp nescafe-dotfiles/.Xresources ~/
 ```
 
+
+##  GTK Theme
+```
+sudo cp -rf themes/gtk/Aesthetic-Night/* /usr/share/themes
+```
+```
+cp -rf themes/gtk/Aesthetic-Night-GTK4/* ~/.config/gtk-4.0
+```
+
+## libinput touchpad settings
+```
+cp 30-touchpad.conf
+```
+
 Notes:
 add programs that you want to start with the x session to .xprofile
 
-
-
-sudo pacman -S rustup
-rustup default stable
-rustup component add rls rust-analysis rust-src
-
-
-#localhostssl: # Set ssl for localhost
-mkcert -install
-mkcert localhost
- 
-
-#remotedesktop: ## Install remotedesktop
-remmina freerdp libvncserver
-
-
-#dnsmasq
-#sudo pacman -S dnsmasq
-sudo ln -vsf ${PWD}/etc/$@/resolv.$@.conf /etc/resolv.$@.conf
-sudo ln -vsf ${PWD}/etc/$@/$@.conf /etc/$@.conf
-sudo mkdir -p /etc/NetworkManager
-sudo ln -vsf {${PWD},}/etc/NetworkManager/NetworkManager.conf
-
-
-dingo: ## Install dingo Google DNS over HTTPS
-	$(PACMAN) $@
-	$(SYSTEMD_ENABLE) $@.service
-
-
-
-
-## Add blackarch 
-#cd /tmp
-#curl -O https://blackarch.org/strap.sh
-#chmod +x strap.sh
-#./strap.sh
-#rm ./strap.sh
-#cd
-
-sed change builddir in makepkg.conf
-
-git clone nerd fonts and remove iosevka with sed
-
-
-cp -r nsescafe/config/broot .config/
 
