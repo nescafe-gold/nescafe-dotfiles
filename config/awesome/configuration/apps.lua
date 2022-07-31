@@ -10,13 +10,11 @@ return {
 		--- Default music client
 		music_player = "wezterm start --class music ncmpcpp",
 		--- Default text editor
-		text_editor = "wezterm start nvim",
-		--- Default code editor
-		code_editor = "code",
+		text_editor = "wezterm start $EDITOR",
 		--- Default web browser
 		web_browser = "firefox",
 		--- Default file manager
-		file_manager = "nautilus",
+		file_manager = "wezterm cli spawn lf $HOME",
 		--- Default network manager
 		network_manager = "wezterm start nmtui",
 		--- Default bluetooth manager

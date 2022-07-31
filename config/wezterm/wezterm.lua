@@ -1,10 +1,3 @@
--- -------------------------------------------------------------------
--- rxyhn's aesthetic wezterm configuration
--- A GPU-accelerated cross-platform terminal emulator and multiplexer
---
--- https://github.com/rxyhn
--- -------------------------------------------------------------------
-
 local wezterm = require("wezterm")
 
 local function font_with_fallback(name, params)
@@ -12,7 +5,7 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "AestheticIosevka Nerd Font Mono"
+local font_name = "JetBrains Mono"
 
 return {
 	-- OpenGL for GPU acceleration, Software for CPU
@@ -36,7 +29,7 @@ return {
 		},
 	},
 	warn_about_missing_glyphs = false,
-	font_size = 10,
+	font_size = 11.5,
 	line_height = 1.0,
 
 	-- Cursor style
