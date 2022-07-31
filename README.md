@@ -174,9 +174,14 @@ sudo cp -rf themes/gtk/Aesthetic-Night/* /usr/share/themes
 cp -rf themes/gtk/Aesthetic-Night-GTK4/* ~/.config/gtk-4.0
 ```
 
+Add this line on ~/.config/gtk-3.0/settings.ini for left controls
+```
+gtk-decoration-layout=close,maximize,minimize:men
+```
+
 ## libinput touchpad settings
 ```
-cp 30-touchpad.conf
+cp 30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 ```
 
 Notes:
