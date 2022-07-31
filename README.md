@@ -170,11 +170,8 @@ cp nescafe-dotfiles/.Xresources ~/
 ```
 sudo cp -rf themes/gtk/Aesthetic-Night/* /usr/share/themes
 ```
-```
-cp -rf themes/gtk/Aesthetic-Night-GTK4/* ~/.config/gtk-4.0
-```
-
 Add this line on ~/.config/gtk-3.0/settings.ini for left controls
+```
 ```
 gtk-decoration-layout=close,maximize,minimize:men
 ```
