@@ -167,10 +167,10 @@ return {
 
 	-- Padding
 	window_padding = {
-		left = 5,
-		right = 5,
-		top = 5,
-		bottom = 5,
+		left = 25,
+		right = 25,
+		top = 25,
+		bottom = 25,
 	},
 
 	-- Tab Bar
