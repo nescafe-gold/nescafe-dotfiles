@@ -5,13 +5,13 @@
 source $HOME/.config/broot/launcher/bash/br
 
 # Load zsh-syntax-highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Suggest aliases for commands
-source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh 
 
 # Search repos for programs that can't be found
-source /usr/share/doc/find-the-command/ftc.zsh noprompt quiet
+#source /usr/share/doc/find-the-command/ftc.zsh noprompt quiet
 
 # FZF Plugins
 source $XDG_CONFIG_HOME/zsh/plugins/fzf/completion.zsh

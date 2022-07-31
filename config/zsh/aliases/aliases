@@ -8,9 +8,6 @@ alias ls='exa --icons --group-directories-first'
 
 #or a script that gets gets the output of the command, parses it somehow and the ls' the directories. use uniq, amongst other methods.
 
-alias ld='lsd -hA --group-dirs first'
-
-
 alias mv='mv -v'
 alias cp='cp -vr'
 alias rm='rm -vr'
