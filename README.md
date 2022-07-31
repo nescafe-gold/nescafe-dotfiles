@@ -165,15 +165,9 @@ The file .Xresources is a config file for  colorscheme information
 cp nescafe-dotfiles/.Xresources ~/
 ```
 
-
 ##  GTK Theme
 ```
 sudo cp -rf themes/gtk/Aesthetic-Night/* /usr/share/themes
-```
-Add this line on ~/.config/gtk-3.0/settings.ini for left controls
-```
-```
-gtk-decoration-layout=close,maximize,minimize:men
 ```
 
 ## libinput touchpad settings
