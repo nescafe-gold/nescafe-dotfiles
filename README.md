@@ -181,17 +181,16 @@ gtk-decoration-layout=close,maximize,minimize:men
 cp 30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 ```
 
-Notes:
-add programs that you want to start with the x session to .xprofile
-
-
 ## Install Lunarvim
+1. Install lunarvim and say yes to the options
 ```
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-
-Say yes to the options
 ```
 
-Copy the config file into 
+Copy the config file to overwrite the default one that is created 
+```
 cp nescafe-dotfiles/config/lvim/config.lua ~/.config/lvim/
+```
 
+## Install Xanmod kernel 
+Designed to detect your CPU so that it only installs your CPU info. I have set the xanmod custom option to not compile dual CPU code to save even more time compiling and reduce the kernel size.
