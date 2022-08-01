@@ -5,9 +5,9 @@ mkdir /home/$username/.cache/packages
 sudo sed -i "s+^#BUILDDIR=.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
 
 # Clone nerd fonts, cd into it, remove iosevka conflict, and build package
-git clone https://aur.archlinux.org/nerd-fonts-complete.git /home/$username/nerd-fonts-complete
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts /home/$username/nerd-fonts-complete
+
 cd /home/$username/nerd-fonts-complete
-sed -i "/'ttf-iosevka-nerd.*/d" PKGBUILD
 makepkg -si
 cd /home/$username
 rm -rf /home/$username/nerd-fonts-complete
