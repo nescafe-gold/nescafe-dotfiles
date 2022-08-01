@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERNAME="$(whoami)"
+username="$(whoami)"
 
 # Pretty print (function).
 info_print () {
