@@ -8,7 +8,7 @@ sudo sed -i "s+^#BUILDDIR=.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts $HOME/nerd-fonts-complete
 
 cd $HOME/nerd-fonts-complete
-makepkg -si
+./install.sh
 cd $HOME
 
 cd $HOME/nescafe-dotfiles
