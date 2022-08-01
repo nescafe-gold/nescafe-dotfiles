@@ -106,7 +106,6 @@ trash-cli
 pinentry
 ueberzug
 sysstat
-flashfocus-git
 qbittorrent
 gpick
 tldr
