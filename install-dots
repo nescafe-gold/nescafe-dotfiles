@@ -10,11 +10,12 @@ git clone --depth 1 https://github.com/ryanoasis/nerd-fonts $HOME/nerd-fonts-com
 cd $HOME/nerd-fonts-complete
 ./install.sh
 cd $HOME
+rm -rf $HOME/nerd-fonts-complete/
 
 cd $HOME/nescafe-dotfiles
 git submodule update --remote --merge
 
-paru -S $(grep -Ev '^#|^$' nescafe-dotfiles/packagelist.txt) --needed --noconfirm 
+paru -S $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --noconfirm --noremovemake --batchinstall 
 
 cp .zshenv $HOME/
 source $HOME/.zshenv
