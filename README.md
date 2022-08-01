@@ -165,9 +165,15 @@ The file .Xresources is a config file for  colorscheme information
 cp nescafe-dotfiles/.Xresources ~/
 ```
 
+
 ##  GTK Theme
 ```
 sudo cp -rf themes/gtk/Aesthetic-Night/* /usr/share/themes
+```
+Add this line on ~/.config/gtk-3.0/settings.ini for left controls
+```
+```
+gtk-decoration-layout=close,maximize,minimize:men
 ```
 
 ## libinput touchpad settings
@@ -178,4 +184,14 @@ cp 30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 Notes:
 add programs that you want to start with the x session to .xprofile
 
+
+## Install Lunarvim
+```
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+
+Say yes to the options
+```
+
+Copy the config file into 
+cp nescafe-dotfiles/config/lvim/config.lua ~/.config/lvim/
 
