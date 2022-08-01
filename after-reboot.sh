@@ -1,6 +1,5 @@
 #!/bin/bash
 
-username="$(whoami)"
 
 # Pretty print (function).
 info_print () {
@@ -80,8 +79,8 @@ if ! [[ "${dotfiles_response,,}" =~ ^(yes|y)$ ]]
 then
     continue
 else
-    chmod +x /home/$username/nescafe-dotfiles/install-dots
-    /home/$username/nescafe-dotfiles/install-dots
+    chmod +x $HOME/nescafe-dotfiles/install-dots
+    $HOME/nescafe-dotfiles/install-dots
 fi
 
 
