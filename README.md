@@ -1,53 +1,8 @@
-# Setting up my dotfiles from a clean Arch Linux install
+# Setting up my dotfiles after my install script
 
-## Prepare for package installation
-1. Install git to clone this repo 
-````bash
-sudo pacman -S git
-``````
-2. Install reflector if you want to setup your pacman download mirrors based on region and download rate. 
-````bash
-sudo pacman -S reflector
-``````
-3. Setup your mirrors based on your country, https, and transfer rate
-- [ ] create reflector command
-
-## Clone repo
-
-````
-git clone https://github.com/nescafe-gold/nescafe-dotfiles.git
-````
-## Install Paru
-Paru is my prefferred package manager for the AUR (Arch User Repository). I want to use rustup over the rust package because it allows me to use multiple rust builds, such as the "nightly" (development) build.
-> **:memo: Note: 
-> Why install Rust?**  
-> Rust is a programming language that many apps are written in. The main reason to switch to other builds like the development one is to take advantage of new, and possibly unstable, features that haven't yet made it to the stable rust package or build.
->
-> **changing rust builds is only possible with rustup, which is the reason I use it over rust.**
-
-1. Install rustup (replace "rustup" with "rust" if you don't want to use rustup).
-````
-sudo pacman -S rustup
-````
-2. If you chose to install rustup, then you need to choose a default build. For now I will choose the stable build.
-````
-rustup default stable
-````
-3. Git clone the Paru repo, which contains the paru PKGFILE:
-````
-git clone https://aur.archlinux.org/paru.git
-````
-Change directory to the paru repo we just git cloned:
-````
-cd paru
-````
-Build the package in the repo. Make sure that you chose the rustup option when it asks, if that is what you want:
-> **:warning: Important:**
->
-> **If you chose rustup over rust then make sure you chose rustup when promoted** 
-````
-makepkg -si
-````
+# prerequisites if not using my script
+* paru or your preferred aur helper (adjust instructions accordingly if you choose your own).
+* git
 
 # Installing all of the packages
 The package list in this repo contains all of the packages that I like to install. Feel free to edit this list as you wish before installing from the list. You can add comments by starting the line with a # and you can add blank lines to separate blocks of packages.
