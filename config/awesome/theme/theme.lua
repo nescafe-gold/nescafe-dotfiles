@@ -158,10 +158,10 @@ theme.layout_machi = icons.machi
 theme.icon_theme = "WhiteSur-dark"
 
 --- Borders
-theme.border_width = 0
-theme.oof_border_width = 0
+theme.border_width = 2.5
+theme.oof_border_width = 2.5
 theme.border_color_marked = theme.titlebar_bg
-theme.border_color_active = theme.titlebar_bg
+theme.border_color_active = theme.xcolor14
 theme.border_color_normal = theme.titlebar_bg
 theme.border_color_new = theme.titlebar_bg
 theme.border_color_urgent = theme.titlebar_bg
@@ -170,7 +170,7 @@ theme.border_color_maximized = theme.titlebar_bg
 theme.border_color_fullscreen = theme.titlebar_bg
 
 --- Corner Radius
-theme.border_radius = 12
+theme.border_radius = 7
 
 --- Edge snap
 theme.snap_bg = theme.xcolor8
