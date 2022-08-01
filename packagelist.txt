@@ -26,7 +26,6 @@ rsync
 rofi
 cronie 
 feh 
-linux-firmware 
 lxappearance-gtk3 
 maim 
 paclabel-git 
