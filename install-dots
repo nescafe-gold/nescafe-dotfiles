@@ -1,3 +1,4 @@
+#!/bin/bash
 username="$(whoami)"
 
 # make package build directory not tempfs because it is a massive install 
