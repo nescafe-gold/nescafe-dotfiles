@@ -1,16 +1,12 @@
 #Fonts
-nerd-fonts-sf-mono
 nodejs-material-design-icons
 ttf-icomoon-feather
 
 ttf-arphic-uming 
-ttf-fira-code 
 ttf-indic-otf 
 ttf-pomicons
-nerd-fonts-complete
 ttf-consolas-ligaturized
 awesome-terminal-fonts
-ttf-jetbrains-mono
 
 
 #ZSH
@@ -139,11 +135,9 @@ xorg-fonts-75dpi
 
 ttf-arphic-uming
 ttf-consolas-ligaturized
-ttf-fira-code
 ttf-font-awesome
 ttf-icomoon-feather
 ttf-indic-otf
-ttf-jetbrains-mono
 ttf-oswald
 ttf-pomicons
 
