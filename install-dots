@@ -33,4 +33,4 @@ cp -v $HOME/nescafe-dotfiles/.Xresources $HOME/
 
 
 cp -rv $HOME/nescafe-dotfiles/lightdm/* /etc/lightdm/
-
+sudo systemctl enable lightdm.service
