@@ -52,20 +52,13 @@ source $HOME/.config/.zshrc
 ```
 mkdir -p $HOME.local/share/fonts XDG_DATA_HOME XDG_CACHE_HOME XDG_CONFIG_HOME GEM_PATH GEM_SPEC_CACHE NPM_CONFIG_USERCONFIG GNUPGHOME _JAVA_OPTIONS GTK2_RC_FILES ZDOTDIR CARGO_HOME FFF_TRASH GEM_HOME GOPATH NPM_CONFIG_USERCONFIG NPM_PACKAGES NODE_PATH $HOME/.cargo/bin $HOME/.local.bin XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME XDG_STATE_HOME XDG_CONFIG_DIRS XDG_DATA_DIRS XDG_RUNTIME_DIR XDG_DESKTOP_DIR XDG_DOWNLOAD_DIR XDG_TEMPLATES_DIR XDG_PUBLICSHARE_DIR XDG_DOCUMENTS_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEOS_DIR FFF_TRASH MANPATH INFOPATH GNUPGHOME GTK2_RC_FILES
 ```
-
-
-
-
-
-
-
-## Install Config Files
+# Install Config Files
 
 git clone --recurse-submodules https://github.com/rxyhn/dotfiles.git ~/
 
 cd dotfiles && git submodule update --remote --merge
 
-## Setup the LightDM Display Manager
+# Setup the LightDM Display Manager
 I chose to install LightDM as my display manager (login manager). My settings are extremely basic because I've never riced a display manager before. I will update the settings over time.
 
 1. Copy my lightdm settings.
