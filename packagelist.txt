@@ -205,3 +205,4 @@ prettier
 lxappearance-gtk3
 npm
 yarn
+lightdm-webkit2-greeter
