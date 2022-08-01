@@ -54,9 +54,9 @@ echo
 git clone https://aur.archlinux.org/linux-xanmod-tt.git linux-xanmod-tt
 cd linux-xanmod-tt
 
-FIND="_microarchitecture=0"
-REPLACE="_microarchitecture=98"
-sed -i "s/$FIND/$REPLACE/g" PKGBUILD
+# FIND="_microarchitecture=0"
+# REPLACE="_microarchitecture=98"
+# sed -i "s/$FIND/$REPLACE/g" PKGBUILD
 
 # FIND="use_numa=y"
 # REPLACE="use_numa=n"
