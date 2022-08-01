@@ -211,3 +211,5 @@ firefox-ublock-origin
 colord
 prettier
 lxappearance-gtk3
+npm
+yarn
