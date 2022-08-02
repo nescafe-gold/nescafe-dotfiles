@@ -213,4 +213,13 @@ firefox-decentraleyes
 firefox-extension-https-everywhere
 firefox-ublock-origin
 profile-sync-daemon
+
+
 ffmpegthumbnailer
+glow
+highlight
+mediainfo
+pistol-git
+tar
+unrar
+
