@@ -206,7 +206,7 @@ lightdm-webkit2-greeter
 lightdm-webkit2-theme-glorious
 glow
 shellcheck
-lf
+lf-bin
 firefox
 firefox-dark-reader
 firefox-decentraleyes
