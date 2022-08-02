@@ -2020,3 +2020,334 @@ z.lua
 : 1659396195:0;rm -r config
 : 1659396201:0;mkdir config
 : 1659396255:0;cp -r ~/.config/* config
+: 1659397058:0;cp -r config/* ~/.config
+: 1659397089:0;nvim .config/wezterm/wezterm.lua
+: 1659397093:0;cd
+: 1659397095:0;nvim .config/wezterm/wezterm.lua
+: 1659397223:0;v nescafe-dotfiles/install-dots
+: 1659397231:0;nvim nescafe-dotfiles/install-dots
+: 1659397261:0;bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+: 1659397356:0;v
+: 1659397368:0;v .config/lvim/config.lua
+: 1659397476:0;scp -r .config/lvim aidan@192.168.0.30:/home/aidan/.config/
+: 1659397483:0;scp -r .config/lvim aidan@192.168.0.24:/home/aidan/.config/
+: 1659397828:0;v no
+: 1659397908:0;v .config/awesome/ui/panels/bottom-panel/battery.lua
+: 1659397925:0;v .config/awesome/ui/panels/bottom-panel/init.lua
+: 1659398000:0;v .config/awesome/ui/panels/bottom-panel/battery.lua
+: 1659398022:0;v .config/awesome/helpers/misc.lua
+: 1659398030:0;v .config/awesome/ui/panels/bottom-panel/battery.lua
+: 1659398126:0;v .config/awesome/ui/panels/bottom-panel/init.lua
+: 1659398249:0;reboot
+: 1659398656:0;v .config/awesome/configuration/keys.lua
+: 1659398773:0;paru youtube-dl
+: 1659398970:0;cd Music
+: 1659398971:0;ls
+: 1659398978:0;yt-dlp --help
+: 1659399012:0;yt-dlp https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659399036:0;v .config/mpd/mpd.conf
+: 1659399248:0;mpc update
+: 1659399401:0;v .config/awesome/configuration/ruled.lua
+: 1659401046:0;systemctl start bluetouth
+: 1659401065:0;sudo pacman -S bluez
+: 1659401115:0;sudo systemctl start bluetooth
+: 1659401121:0;sudo systemctl enable bluetooth
+: 1659401177:0;man yt-dlp
+: 1659401315:0;rm -r *
+: 1659401327:0;yt-dlp -x https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659401364:0;bluetoothctl
+: 1659401371:0;paru buetooth
+: 1659401376:0;paru bluetooth
+: 1659401413:0;bluetoothctl
+: 1659401584:0;systemctl status bluetouth
+: 1659401590:0;systemctl status bluetooth
+: 1659401612:0;bluetoothctl
+: 1659401785:0;v .config/awesome/ui/panels/bottom-panel/init.lua
+: 1659401860:0;ls
+: 1659401897:0;yt-dlp -x --format mp3 https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659401911:0;man yt-dlp
+: 1659401951:0;yt-dlp -x --audio-format mp3 https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659401962:0;rm -r
+: 1659401965:0;rm -r *
+: 1659401969:0;yt-dlp -x --audio-format mp3 https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659402015:0;ls Music
+: 1659453098:0;mkdir .config/mpd/playlists
+: 1659453410:0;systemctl start mpd
+: 1659453418:0;systemctl status mpd
+: 1659453434:0;systemctl --user start mpd
+: 1659453446:0;systemctl --user status mpd
+: 1659453477:0;v nescafe-dotfiles/after-reboot.sh
+: 1659453523:0;sudo systemctl stop mpd
+: 1659453530:0;systemctl --user stop mpd
+: 1659453533:0;systemctl --user start mpd
+: 1659453539:0;systemctl --user status mpd
+: 1659453560:0;v .config/awesome/configuration/autostart.lua
+: 1659453577:0;systemctl stop --user mpd
+: 1659453583:0;systemctl status --user mpd
+: 1659453587:0;reboot
+: 1659454429:0;mkdir Music/Videos
+: 1659454433:0;cd Music/Videos
+: 1659454446:0;yt-dlp https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659454766:0;v Music/yt-dlp-settings
+: 1659454770:0;v Music/yt-dlp-settings.md
+: 1659455100:0;rm -r *
+: 1659455106:0;yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(channel_id)s/%(playlist_id)s/%(id)s.mp4'
+: 1659455195:0;yt-dlp -f 'bv[height=1080]+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(channel_id)s/%(playlist_id)s/%(id)s.%(ext)s'
+: 1659455323:0;yt-dlp -f 'bv[height=1080][ext=mp4]+ba[ext=m4a]' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(channel_id)s/%(playlist_id)s/%(id)s.mp4'
+: 1659455517:0;v .config/lvim/config.lua
+: 1659455804:0;v Music/yt-dlp-settings.md
+: 1659456048:0;v .config/lvim/config.lua
+: 1659456282:0;v Music/yt-dlp-settings.md
+: 1659456293:0;glow
+: 1659456316:0;mkdir ProjectsNStuff
+: 1659456322:0;cd ProjectsNStuff
+: 1659456343:0;gcl https://github.com/nescafe-gold/nescafe-dotfiles
+: 1659456403:0;Music
+: 1659456417:0;sudo pacman -S glow
+: 1659456436:0;v notes
+: 1659456441:0;v ~/notes
+: 1659456520:0;glow yt-dlp-settings.md
+: 1659456539:0;v yt-dlp-settings.md
+: 1659457096:0;cd
+: 1659457098:0;cd Music
+: 1659457103:0;*.mp3
+: 1659457108:0;ls
+: 1659457129:0;find ./ -name "*.mp3"
+: 1659457162:0;find ./ -name "*.mp3" | xargs -I {} rm "{}"
+: 1659457173:0;find ./ -name "*.mp3" | xargs -I {} rm {}
+: 1659457187:0;find ./ -name "*.mp3" | xargs -0I {} rm "{}"
+: 1659457220:0;find ./ -name "*.mp3" -exec rm \ 
+: 1659457221:0;find ./ -name "*.mp3" -exec rm
+: 1659457239:0;find ./ -name "*.mp3" -exec rm;
+: 1659457250:0;find ./ -name "*.mp3" -exec rm
+: 1659457263:0;find ./ -name "*.mp3" -exec {rm}
+: 1659457266:0;find ./ -name "*.mp3" -exec "rm"
+: 1659457275:0;rm *.mp3
+: 1659457280:0;rm "*.mp3"
+: 1659457288:0;ls
+: 1659457309:0;yt-dlp -f 'ba' -x --audio-format mp3 --embed-metadata --embed-subs --embed-thumbnail --download-archive audio.txt https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(channel_id)s/%(playlist_id)s/%(id)s.mp3'
+: 1659457454:0;bluetoothctl
+: 1659458125:0;ls
+: 1659458170:0;v yt-dlp-settings.md
+: 1659458299:0;yt-dlp -f 'ba' -x --audio-format mp3 --embed-metadata --embed-subs --embed-thumbnail --download-archive audio.txt https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(id)s.mp3'
+: 1659458308:0;rm -r *.mp3
+: 1659458311:0;ls
+: 1659458317:0;rm -r UCWJ2lWNubArHWmf3FIHbfcQ
+: 1659458322:0;yt-dlp -f 'ba' -x --audio-format mp3 --embed-metadata --embed-subs --embed-thumbnail --download-archive audio.txt https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(id)s.mp3'
+: 1659458331:0;rm audio.txt
+: 1659458332:0;yt-dlp -f 'ba' -x --audio-format mp3 --embed-metadata --embed-subs --embed-thumbnail --download-archive audio.txt https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(id)s.mp3'
+: 1659458439:0;cd Music
+: 1659458442:0;ls
+: 1659458469:0;cd Music
+: 1659458478:0;rm cKQ4oTKQw3o.web cKQ4oTKQw3o.web
+: 1659458480:0;ls
+: 1659458555:0;yt-dlp -f 'ba' -x --audio-format mp3 --embed-metadata --embed-subs --embed-thumbnail --download-archive audio.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(id)s.mp3'
+: 1659458576:0;v yt-dlp-settings.md
+: 1659458581:0;cd Music
+: 1659458582:0;v yt-dlp-settings.md
+: 1659458756:0;cd Videos
+: 1659458760:0;rm -r *
+: 1659458767:0;yt-dlp -f 'bv*[height=1080]+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLlVlyGVtvuVnUjA4d6gHKCSrLAAm2n1e6 -o '%(id)s.mp4'
+: 1659458790:0;v ../yt-dlp-settings.md
+: 1659458854:0;yt-dlp -f 'bv*[height=1080]+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(id)s.mp4'
+: 1659458868:0;rm -r *
+: 1659458871:0;yt-dlp -f 'bv*[height=1080]+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(id)s.mp4'
+: 1659459330:0;cd ProjectsNStuff
+: 1659459333:0;cd nescafe-dotfiles
+: 1659459351:0;g submodule update
+: 1659459355:0;g submodule init
+: 1659459373:0;g submodule update --remote --force
+: 1659459428:0;v packagelist.txt
+: 1659459487:0;cp -r ProjectsNStuff/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
+: 1659459490:0;sudo cp -r ProjectsNStuff/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
+: 1659459559:0;paru lunarvim
+: 1659459601:0;v notes
+: 1659459648:0;v install-dots
+: 1659459660:0;paru -S shellcheck
+: 1659459728:0;pwd
+: 1659459742:0;v packagelist.txt
+: 1659459751:0;v install-dots
+: 1659460282:0;gc install-dots -m "changed syntax in accordance with shellchecker utility"
+: 1659460300:0;git config --global aidanlane02@protonmail.com
+: 1659460322:0;g config --global user.email aidanlane02@protonmail.com
+: 1659460330:0;g config --global user.name nescafe-gold
+: 1659460333:0;gc install-dots -m "changed syntax in accordance with shellchecker utility"
+: 1659460335:0;gpu
+: 1659460348:0;v notes
+: 1659460383:0;scp aidan@192.168.0.30:/home/aidan/notes ~/
+: 1659460390:0;v notes
+: 1659460397:0;rm notes
+: 1659460406:0;scp -v aidan@192.168.0.30:/home/aidan/notes ~/
+: 1659460431:0;ip a
+: 1659460439:0;scp -v aidan@192.168.0.24:/home/aidan/notes ~/
+: 1659460471:0;v notes
+: 1659460653:0;yt-dlp -f 'bv+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(id)s.mp4'
+: 1659460675:0;rm -r *.mp3
+: 1659460678:0;ls
+: 1659460696:0;rm *.mp4,.json
+: 1659460704:0;rm {*.mp4,.json}
+: 1659460709:0;rm {*.mp4,*.json}
+: 1659460713:0;ls
+: 1659460721:0;rm *.json
+: 1659460731:0;rm -f *.json
+: 1659460743:0;rm -f ./*.json
+: 1659460748:0;rm -f ./*.mp4
+: 1659460769:0;yt-dlp -f 'bv+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(id)s.mp4'
+: 1659460787:0;rm videos.txt
+: 1659460791:0;ls
+: 1659460798:0;rm *
+: 1659460805:0;yt-dlp -f 'bv+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(id)s.mp4'
+: 1659460899:0;cd ProjectsNStuff
+: 1659460914:0;gcl https://github.com/BrodieRobertson/dotfiles.git brodie-dots
+: 1659460981:0;cd brodie-dots
+: 1659460999:0;cp -r config/lf ~/.config
+: 1659461008:0;sudo pacman -S lf
+: 1659461012:0;paru -S lf
+: 1659461030:0;cd ProjectsNStuff/nescafe-dotfiles
+: 1659461032:0;v packagelist.txt
+: 1659461039:0;paru -Syu lf
+: 1659461114:0;ls
+: 1659461147:0;rm * .json
+: 1659461171:0;rm * ./{*.json,*.mp3}
+: 1659461180:0;rm * ./*.json
+: 1659461191:0;rm -f ./*.json
+: 1659461196:0;rm -f ./*.mp3
+: 1659461197:0;ls
+: 1659461228:0;rm -f *.vtt
+: 1659461236:0;rm -f *.webp
+: 1659461239:0;rm -f *.part
+: 1659461240:0;ls
+: 1659461245:0;rm audio.txt
+: 1659461257:0;yt-dlp -f 'bv+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659461285:0;ls Music/Videos
+: 1659461292:0;rm *
+: 1659461299:0;ls
+: 1659461326:0;rm *.mp4
+: 1659461335:0;rm *webp
+: 1659461338:0;rm *json
+: 1659461341:0;rm *part
+: 1659461344:0;rm *txt
+: 1659461345:0;ls
+: 1659461359:0;yt-dlp -f 'bv+ba' --embed-metadata --embed-subs --embed-thumbnail --merge-output-format mp4 --download-archive videos.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659461374:0;ls Music/Videos
+: 1659461443:0;yt-dlp -f 'ba' -x --audio-format mp3 --embed-metadata --embed-subs --embed-thumbnail --download-archive audio.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO -o '%(id)s.mp3'
+: 1659461452:0;ls Music/
+: 1659461477:0;ls
+: 1659461494:0;rm 2vniMalkBYA.mp3 vn17c274U5E audio.txt vn17c274U5E. vn17c274U5E.
+: 1659461502:0;rm -r 2vniMalkBYA.mp3 vn17c274U5E audio.txt vn17c274U5E. vn17c274U5E.
+: 1659461505:0;ls
+: 1659461524:0;rm vn17c274U5E.mp3 vn17c274U5E.webm vn17c274U5E.webp
+: 1659461525:0;ls
+: 1659461535:0;yt-dlp -f 'ba' -x --audio-format mp3 --embed-metadata --embed-subs --embed-thumbnail --download-archive audio.txt https://www.youtube.com/playlist?list=PLr7oBC3rVwn_TByb89HbsBPafzavJQjZO
+: 1659461543:0;ls Music/
+: 1659461551:0;v Music/yt-dlp-settings.md
+: 1659461743:0;paru memavalid
+: 1659461757:0;v nescafe-dotfiles/packagelist.txt
+: 1659461782:0;cd ProjectsNStuff
+: 1659461792:0;rm -r ~/nescafe-dotfiles
+: 1659461800:0;ls
+: 1659461819:0;gcl https://github.com/nescafe-gold/Nescafe-ArchInstall
+: 1659461823:0;ls
+: 1659461828:0;cd Nescafe-ArchInstall
+: 1659461836:0;v current-install
+: 1659461865:0;v ../nescafe-dotfiles/packagelist.txt
+: 1659462056:0;gc current-install -m "removed some packages and moved them to dotfile"
+: 1659462065:0;cd ../nescafe-dotfiles
+: 1659462083:0;gc packagelist.txt -m "Added firefox commands and removed memavalid"
+: 1659462110:0;paru -Syu lf
+: 1659462184:0;cp -r ~/ProjectsNStuff/brodie-dots/config/mpv ../nescafe-dotfiles/config
+: 1659462210:0;paru -S lf
+: 1659462237:0;cd ../nescafe-dotfiles
+: 1659462243:0;v packagelist.txt
+: 1659462258:0;v install-dots
+: 1659462286:0;rm config/mpv/watch_later/*
+: 1659462305:0;ga config/
+: 1659462315:0;gc config/ -m "added mpv"
+: 1659462337:0;gc packagelist.txt -m "changed lf to lf-bin"
+: 1659462345:0;gpu
+: 1659462351:0;v ~/notes
+: 1659462366:0;cd ../Nescafe-ArchInstall
+: 1659462371:0;gpu
+: 1659462387:0;lf
+: 1659462433:0;v .config/lf/preview
+: 1659462503:0;paru -S highlight
+: 1659462510:0;lf
+: 1659462622:0;m ~/Music/Videos/*.mp4
+: 1659462736:0;paru -S ffmpegthumbnailer
+: 1659462751:0;v ProjectsNStuff/nescafe-dotfiles/packagelist.txt
+: 1659462789:0;lf Music
+: 1659462850:0;v .config/zsh/cfg_parts/env.zsh
+: 1659462866:0;lf
+: 1659462925:0;cp .config/zsh/cfg_parts/env.zsh ProjectsNStuff/nescafe-dotfiles/config/zsh/cfg_parts
+: 1659462935:0;cd ProjectsNStuff/nescafe-dotfiles
+: 1659462950:0;gc config/zsh/cfg_parts/env.zsh -m "Added lf icons"
+: 1659462963:0;gc packagelist.txt -m "added ffmpefg thumbnailer"
+: 1659462969:0;paru uberzug
+: 1659462993:0;paru ueberzug
+: 1659463009:0;v .config/lf/preview
+: 1659463033:0;paru pdftoppm
+: 1659463081:0;pdftoppm
+: 1659463134:0;v ProjectsNStuff/nescafe-dotfiles/packagelist.txt
+: 1659463167:0;paru glow highlight mediainfo pistol tar unrar zipinfo
+: 1659463175:0;paru -S glow highlight mediainfo pistol tar unrar zipinfo
+: 1659463196:0;cp -r ProjectsNStuff/brodie-dots/config/pistol ~/.config
+: 1659463201:0;v .config/pistol/pistol.conf
+: 1659463227:0;paru pistol
+: 1659463243:0;v ProjectsNStuff/nescafe-dotfiles/packagelist.txt
+: 1659463264:0;paru zipinfo
+: 1659463280:0;paru zip
+: 1659463288:0;zipinfo
+: 1659463314:0;paru -S glow highlight mediainfo pistol-git tar unrar
+: 1659463366:0;ls
+: 1659463411:0;open
+: 1659463412:0;o
+: 1659463498:0;cat Sainté\ -\ Stylin\'\ \(Official\ Video\)\ \[c0JUnIiAHD4\].live_chat.json
+: 1659463514:0;highlight Sainté\ -\ Stylin\'\ \(Official\ Video\)\ \[c0JUnIiAHD4\].live_chat.json
+: 1659463526:0;highlight Sainté\ -\ Stylin\'\ \(Official\ Video\)\ \[c0JUnIiAHD4\].live_chat.json | glow
+: 1659463562:0;rm AK\ -\ ADAPT\ OR\ DIE\ \[-gU2OI0Nm1k\].live_chat.json AK\ -\ Afraid\ of\ Love\ \(Official\ Music\ Video\)\ \[XE4Uvoam2r8\].live_chat.json AK\ -\ ANTIDOTE\ \[FPAv2pPnEjk\].live_chat.json AK\ -\ BETTING\ ON\ ME\ \(Official\ Audio\)\ \[Rbx44R9li-E\].live_chat.json AK\ -\ BRUNSWICK\ FREESTYLE\ \[kndYeGp3WWE\].live_chat.json AK\ -\ CANDY\ LAND\ \(Official\ Lyric\ Video\)\ \[v390bf-RI_k\].live_chat.json AK\ -\ CLOSED\ OFF\ \(Official\ Music\ Video\)\ \[bLd8blc-5TI\].live_chat.json AK\ -\ IN\ DA\ CLUB\ \(REMIX\)\ \[YBzLXGkEyYw\].live_chat.json AK\ -\ INDUSTRY\ BABY\ \(REMIX\)\ \[QF90qOkSLRc\].live_chat.json AK\ -\ I\ N\ T\ E\ R\ L\ U\ D\ E\ \(REMIX\)..\ Letter\ to\ J.\ Cole\ \[_m65iC-4S8U\].live_chat.json AK\ -\ LET\ LOOSE\ \(Prod.\ AK\)\ \[-0lcZziyGw8\].live_chat.json AK\ -\ MOTLEY\ CREW\ \(REMIX\)\ \[Sm-p9dWuxTc\].live_chat.json AK\ -\ SCREAMs\ \(Prod.\ AK\)\ \[_m8dRgYA9TQ\].live_chat.json AK\ -\ WHATS\ POPPIN\ \(REMIX\)\ \[jDaQMFx9GTY\].live_chat.json Bas\ -\ \[Admire\ Her\]\ ft.\ Gunna\ \(Official\ Video\)\ \[zLT9E7vR7gU\].live_chat.json J.\ Cole\ -\ a\ m\ a\ r\ i\ \(Official\ Music\ Video\)\ \[w3333Fo6ufY\].live_chat.json J.\ Cole\ -\ a\ p\ p\ l\ y\ i\ n\ g\ .\ p\ r\ e\ s\ s\ u\ r\ e\ \(Official\ Music\ Video\)\ \[BnK9oeBI9G4\].live_chat.json J.\ Cole\ Freestyles\ Over\ \'93\ Til\ Infinity\'\ \&\ Mike\ Jones\'\ \'Still\ Tippin\'\ -\ L.A.\ Leakers\ Freestyle\ \#108\ \[YlpN3S16ZAs\].live_chat.json Joey\ Bada\$\$\ -\ Head\ High\ _\ A\ COLORS\ SHOW\ \[1KiEVq0tf9g\].live_chat.json Kam\ Michael\ -\ Alive\ Again\ \(ft.\ Eredaze\)\ \(Official\ Video\)\ \[77ZIqmR3o9A\].live_chat.json PmBata\ -\ huh\!\ \[Official\ Video\]\ \[b8w3JrSCQpA\].live_chat.json Rod\ Wave\ -\ \ Rags2Riches\ 2\ ft\ Lil\ Baby\ \(Official\ Music\ Video\)\ \[A2mJSG0L9U0\].live_chat.json Sainté\ -\ Stylin\'\ \(Official\ Video\)\ \[c0JUnIiAHD4\].live_chat.json
+: 1659463564:0;ls
+: 1659463625:0;m ~/Music/Videos/*.mp4
+: 1659463684:0;lf
+: 1659463804:0;paru -S glow highlight mediainfo pistol-git tar unrar
+: 1659464007:0;v .config/zsh/cfg_parts/env.zsh
+: 1659464076:0;export GOPATH
+: 1659464087:0;echo $GOPATH
+: 1659464101:0;echo $XDG_DATA_HOME
+: 1659464132:0;echo $GOPATH
+: 1659464158:0;rg GOPATH
+: 1659464174:0;v .config/zsh/cfg_parts/env.zsh
+: 1659464211:0;pwd
+: 1659464283:0;v .config/zsh/cfg_parts/env.zsh
+: 1659464359:0;echo $GOPATH
+: 1659464385:0;v go env GOPATH
+: 1659464402:0;go env GOPATH
+: 1659464457:0;v .config/zsh/.zshrc
+: 1659464473:0;v .config/zsh/cfg_parts/env.zsh
+: 1659464482:0;echo $GEM_PATH
+: 1659464497:0;echo $XDG_DATA_HOME
+: 1659464508:0;echo $XDG_CONFIG_HOME
+: 1659464571:0;echo $GOPATH
+: 1659464579:0;v go env GOPATH
+: 1659464586:0;go env GOPATH
+: 1659464591:0;paru -S glow highlight mediainfo pistol-git tar unrar
+: 1659464671:0;echo $BUILDDIR
+: 1659464683:0;sudo lvim /etc/makepkg.conf
+: 1659464886:0;mkdir $XDG_CACHE_HOME/packages
+: 1659464906:0;sed "s/BUILDDIR.*/BUILDDIR=/\$XDG_CACHE_HOME/packages" /etc/makepkg.conf
+: 1659464913:0;sudo sed "s/BUILDDIR.*/BUILDDIR=/\$XDG_CACHE_HOME/packages" /etc/makepkg.conf
+: 1659464936:0;sudo sed "s/BUILDDIR.*/BUILDDIR=/$XDG_CACHE_HOME/packages" /etc/makepkg.conf
+: 1659464950:0;sudo sed "s/BUILDDIR.*/BUILDDIR=/\$XDG_CACHE_HOME\/packages" /etc/makepkg.conf
+: 1659464956:0;sudo sed "s/BUILDDIR.*/BUILDDIR=/\$XDG_CACHE_HOME\/packages/" /etc/makepkg.conf
+: 1659464992:0;sudo sed "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
+: 1659465024:0;v ProjectsNStuff/nescafe-dotfiles/install-dots
+: 1659464720:392;v .config/zsh/cfg_parts/env.zsh
+: 1659465122:0;paru -S glow highlight mediainfo pistol-git tar unrar
+: 1659465147:0;sudo sed -i "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
+: 1659465157:0;v ProjectsNStuff/nescafe-dotfiles/install-dots
+: 1659465207:0;paru -S glow highlight mediainfo pistol-git tar unrar
+: 1659465225:0;v ProjectsNStuff/nescafe-dotfiles/install-dots
+: 1659465295:0;sed "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
+: 1659465320:0;cd ProjectsNStuff/nescafe-dotfiles
+: 1659465336:0;gc packagelist.txt -m "added lf preview dependencies"
+: 1659465388:0;gc install-dots -m "changed builddir in makepkg woth sed"
+: 1659465450:0;cp -rv ~/.config/zsh/* config/zsh/
