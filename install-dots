@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # make package build directory not tempfs because it is a massive install 
-mkdir "$HOME/.cache/packages"
-sudo sed -i "s+^#BUILDDIR=.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
+mkdir "$XDG_CACHE_HOME/packages"
+sudo sed -i "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
 
 # Clone nerd fonts, cd into it, remove iosevka conflict, and build package
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts "$HOME/nerd-fonts-complete"
@@ -30,6 +30,8 @@ cp -rv "$HOME/nescafe-dotfiles/fonts/*" "$HOME/.local/share/fonts"
 fc-cache -fv
 
 cp -rv "$HOME/nescafe-dotfiles/config/*" "$HOME/.config"
+
+sudo sed -i "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
 
 cp -v "$HOME/nescafe-dotfiles/.Xresources" "$HOME/"
 
