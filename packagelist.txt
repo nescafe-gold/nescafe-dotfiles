@@ -10,7 +10,6 @@ awesome-terminal-fonts
 
 
 #ZSH
-find-the-command
 zsh-you-should-use
 zsh-syntax-highlighting
 zsh-completions
@@ -194,11 +193,9 @@ python-pip
 archlinux-keyring
 ntfs-3g
 
-firefox-extension-https-everywhere 
 entr 
 dbus-broker 
 wireplumber 
-firefox-ublock-origin
 # required by screenshot tool
 colord
 prettier
@@ -207,3 +204,12 @@ npm
 yarn
 lightdm-webkit2-greeter
 lightdm-webkit2-theme-glorious
+glow
+shellcheck
+lf
+firefox
+firefox-dark-reader
+firefox-decentraleyes
+firefox-extension-https-everywhere
+firefox-ublock-origin
+profile-sync-daemon
