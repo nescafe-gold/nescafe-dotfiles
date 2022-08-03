@@ -21,6 +21,11 @@ shift = "Shift"
 --- ~~~~~~~~~~~~~~~~~~~
 awful.keyboard.append_global_keybindings({
 
+  awful.key({ mod }, "z", function()
+    awful.screen.focused().quake:toggle()
+  end, { description = "dropdown terminal", group = "app" }),
+
+
   --- App
   --- ~~~
   -- Terminal
@@ -47,6 +52,11 @@ awful.keyboard.append_global_keybindings({
   awful.key({ mod, shift }, "w", function()
     awful.spawn(apps.default.web_browser)
   end, { description = "open web browser", group = "app" }),
+
+  -- dashboard widget
+  awful.key({ mod }, "o", function()
+    awesome.emit_signal("central_panel::toggle", awful.screen.focused())
+  end, { description = "Toggle dashboard widget", group = "Widgets" }),
 
   --- WM
   --- ~~
@@ -152,6 +162,8 @@ awful.keyboard.append_global_keybindings({
   awful.key({ mod }, "grave", function()
     awful.spawn.with_shell(apps.default.music_player)
   end, { description = "open music client", group = "hotkeys" }),
+
+
 
   --- Brightness Control
   awful.key({}, "XF86MonBrightnessUp", function()
