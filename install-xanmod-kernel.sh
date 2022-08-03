@@ -58,6 +58,7 @@ fi
 info_print "creating a database of modules in use"
 su -c "modprobed-db" $username
 su -c "modprobed-db store" $username
+
 info_print "Starting and enabling the modprobed-db service"
 su -c "systemctl --user enable --now modprobed-db.service" $username
 # su -c "sudo modprobed-db rebuild" $username
