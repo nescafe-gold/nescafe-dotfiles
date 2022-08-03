@@ -45,7 +45,7 @@ username=$(whoami)
 
 package="modprobed-db"
 if paru -Qs $package > /dev/null ; then
-    continue
+    break
 else
     su -c "paru -S modprobed-db --noconfirm --needed" $username
 fi
@@ -53,7 +53,7 @@ fi
 su -c "modprobed-db" $username
 su -c "modprobed-db store" $username
 su -c "systemctl --user enable --now modprobed-db.service" $username
-su -c "sudo modprobed-db rebuild " $username
+# su -c "sudo modprobed-db rebuild" $username
 
 echo
 tput setaf 2
@@ -76,13 +76,13 @@ echo
 git clone https://aur.archlinux.org/linux-xanmod-tt.git $HOME/linux-xanmod-tt
 cd $HOME/linux-xanmod-tt
 
-FIND="_microarchitecture=0"
-REPLACE="_microarchitecture=98"
-sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
-
-# FIND="use_numa=y"
-# REPLACE="use_numa=n"
+# FIND="_microarchitecture=0"
+# REPLACE="_microarchitecture=98"
 # sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
+
+FIND="use_numa=y"
+REPLACE="use_numa=n"
+sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
 
 # FIND="use_tracers=y"
 # REPLACE="use_tracers=n"
@@ -96,11 +96,11 @@ sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
 # REPLACE="_compress_modules=n"
 # sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
 
-FIND="_localmodcfg=n"
-REPLACE="_localmodcfg=y"
-sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
+# FIND="_localmodcfg=n"
+# REPLACE="_localmodcfg=y"
+# sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
 
-su -c "makepkg -s --skippgpcheck -f" $(whoami)
+su -c "makepkg -sic --skippgpcheck -f" $username
 
 
 cd $HOME
