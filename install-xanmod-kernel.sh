@@ -41,14 +41,19 @@ echo
 
 username=$(whoami)
 
-#https://wiki.archlinux.org/title/Modprobed-db
-info_print "Install modprobed-db if it isn't already installed"
-package="modprobed-db"
-if paru -Qs $package > /dev/null ; then
-    break
+isPackageInstalled() {
+  pacman -Qi "$packageName" &> /dev/null
+  echo $?
+}
+
+info_print "Cheking if modprobed-db is installed"
+if [ $(isPackageInstalled 'modprobed-db') ]; then 
+    info_print "modprobed-db is already installed"
 else
+    info_print "Installing modprobe-db"
     su -c "paru -S modprobed-db --noconfirm --needed" $username
 fi
+
 
 info_print "creating a database of modules in use"
 su -c "modprobed-db" $username
