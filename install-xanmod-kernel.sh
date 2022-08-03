@@ -75,8 +75,8 @@ echo
 
 #https://wiki.archlinux.org/title/Modprobed-db
 
-git clone https://aur.archlinux.org/linux-xanmod-tt.git $HOME/linux-xanmod-tt
-cd $HOME/linux-xanmod-tt
+git clone https://aur.archlinux.org/linux-xanmod-tt.git "$HOME/linux-xanmod-tt"
+cd "$HOME/linux-xanmod-tt"
 
 # FIND="_microarchitecture=0"
 # REPLACE="_microarchitecture=98"
@@ -84,28 +84,28 @@ cd $HOME/linux-xanmod-tt
 
 FIND="use_numa=y"
 REPLACE="use_numa=n"
-sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
+sed -i "s/$FIND/$REPLACE/g" "$HOME/linux-xanmod-tt/PKGBUILD"
 
 # FIND="use_tracers=y"
 # REPLACE="use_tracers=n"
-# sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
+# sed -i "s/$FIND/$REPLACE/g" "$HOME/linux-xanmod-tt/PKGBUILD"
 
 # FIND="_compiler=gcc"
 # REPLACE="_compiler=gcc"
-# sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
+# sed -i "s/$FIND/$REPLACE/g" "$HOME/linux-xanmod-tt/PKGBUILD"
 
 # FIND="_compress_modules=n"
 # REPLACE="_compress_modules=n"
-# sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
+# sed -i "s/$FIND/$REPLACE/g" "$HOME/linux-xanmod-tt/PKGBUILD"
 
 # FIND="_localmodcfg=n"
 # REPLACE="_localmodcfg=y"
-# sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
+# sed -i "s/$FIND/$REPLACE/g" "$HOME/linux-xanmod-tt/PKGBUILD"
 
-su -c "makepkg -sic --skippgpcheck -f --noconfirm" $username
+su -c "makepkg -sic --skippgpcheck -f --noconfirm" "$username"
 
-cd $HOME
-rm -rf $HOME/linux-xanmod-tt
+cd "$HOME"
+rm -rf "$HOME/linux-xanmod-tt"
 
 echo
 tput setaf 2
