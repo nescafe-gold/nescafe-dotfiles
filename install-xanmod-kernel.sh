@@ -34,7 +34,7 @@ error_print () {
 echo
 tput setaf 2
 echo "################################################################"
-echo "################### modprobed-db to install"
+echo "################### Installing and setting up modprobed-db"
 echo "################################################################"
 tput sgr0
 echo
@@ -42,7 +42,7 @@ echo
 username=$(whoami)
 
 #https://wiki.archlinux.org/title/Modprobed-db
-
+info_print "Install modprobed-db if it isn't already installed"
 package="modprobed-db"
 if paru -Qs $package > /dev/null ; then
     break
@@ -50,15 +50,17 @@ else
     su -c "paru -S modprobed-db --noconfirm --needed" $username
 fi
 
+info_print "creating a database of modules in use"
 su -c "modprobed-db" $username
 su -c "modprobed-db store" $username
+info_print "Starting and enabling the modprobed-db service"
 su -c "systemctl --user enable --now modprobed-db.service" $username
 # su -c "sudo modprobed-db rebuild" $username
 
 echo
 tput setaf 2
 echo "################################################################"
-echo "################### modprobed-db installed"
+echo "################### modprobed-db has been setup"
 echo "################################################################"
 tput sgr0
 echo
@@ -66,7 +68,7 @@ echo
 echo
 tput setaf 2
 echo "################################################################"
-echo "################### Start - Detecting CPU && No Multiple CPU's"
+echo "################### Start - Generic CPU && No Multiple CPU's"
 echo "################################################################"
 tput sgr0
 echo
@@ -100,8 +102,7 @@ sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
 # REPLACE="_localmodcfg=y"
 # sed -i "s/$FIND/$REPLACE/g" $HOME/linux-xanmod-tt/PKGBUILD
 
-su -c "makepkg -sic --skippgpcheck -f" $username
-
+su -c "makepkg -sic --skippgpcheck -f --noconfirm" $username
 
 cd $HOME
 rm -rf $HOME/linux-xanmod-tt
