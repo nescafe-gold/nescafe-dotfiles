@@ -222,4 +222,4 @@ mediainfo
 pistol-git
 tar
 unrar
-
+ttf-jetbrains-mono
