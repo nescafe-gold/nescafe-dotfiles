@@ -1,41 +1,49 @@
 #!/bin/bash
 
-# make package build directory not tempfs because it is a massive install 
-sudo mkdir "$XDG_CACHE_HOME/packages"
-sudo sed -i "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
-
 # Clone nerd fonts, cd into it, remove iosevka conflict, and build package
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts "$HOME/nerd-fonts-complete"
-
 cd "$HOME/nerd-fonts-complete" || "failed to cd into nerd-fonts-complete. Check if it was git cloned correctly"; exit
 ./install.sh
 cd "$HOME" || "home directory doesn't exist"; exit
-
 rm -rf "$HOME/nerd-fonts-complete/"
 
-cd "$HOME/nescafe-dotfiles" || "failed to cd into nescafe-dotfiles. Check if it was git cloned correctly"; exit
 
+# CD into dotfiles and initialise the git submodules
+cd "$HOME/nescafe-dotfiles" || "failed to cd into nescafe-dotfiles. Check if it was git cloned correctly"; exit
 git submodule init
 git submodule update --remote --merge
 
-paru -S "$(grep -Ev '^#|^$' "$HOME/nescafe-dotfiles/packagelist.txt")" --needed --noconfirm --noremovemake --batchinstall 
 
-mkdir -p "$HOME/.local/share/fonts XDG_DATA_HOME XDG_CACHE_HOME $XDG_CACHE_HOME/packages XDG_CONFIG_HOME GEM_PATH GEM_SPEC_CACHE NPM_CONFIG_USERCONFIG GNUPGHOME _JAVA_OPTIONS GTK2_RC_FILES ZDOTDIR CARGO_HOME FFF_TRASH GEM_HOME GOPATH NPM_CONFIG_USERCONFIG NPM_PACKAGES NODE_PATH $HOME/.cargo/bin $HOME/.local.bin XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME XDG_STATE_HOME XDG_CONFIG_DIRS XDG_DATA_DIRS XDG_RUNTIME_DIR XDG_DESKTOP_DIR XDG_DOWNLOAD_DIR XDG_TEMPLATES_DIR XDG_PUBLICSHARE_DIR XDG_DOCUMENTS_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEOS_DIR FFF_TRASH MANPATH INFOPATH GNUPGHOME GTK2_RC_FILES"
-
+# Setup ZSH environment and .zshrc
 cp -v "$HOME/nescafe-dotfiles/.zshenv" "$HOME/"
 source "$HOME/.zshenv"
 source "$HOME/.config/zsh/.zshrc"
 
+# make all the directories defined in the zshenv
+mkdir -p "$HOME/.local/share/fonts XDG_DATA_HOME XDG_CACHE_HOME $XDG_CACHE_HOME/packages XDG_CONFIG_HOME GEM_PATH GEM_SPEC_CACHE NPM_CONFIG_USERCONFIG GNUPGHOME _JAVA_OPTIONS GTK2_RC_FILES ZDOTDIR CARGO_HOME FFF_TRASH GEM_HOME GOPATH NPM_CONFIG_USERCONFIG NPM_PACKAGES NODE_PATH $HOME/.cargo/bin $HOME/.local.bin XDG_CONFIG_HOME XDG_CACHE_HOME XDG_DATA_HOME XDG_STATE_HOME XDG_CONFIG_DIRS XDG_DATA_DIRS XDG_RUNTIME_DIR XDG_DESKTOP_DIR XDG_DOWNLOAD_DIR XDG_TEMPLATES_DIR XDG_PUBLICSHARE_DIR XDG_DOCUMENTS_DIR XDG_MUSIC_DIR XDG_PICTURES_DIR XDG_VIDEOS_DIR FFF_TRASH MANPATH INFOPATH GNUPGHOME GTK2_RC_FILES"
+
+# make package build directory not tempfs because it is a massive install 
+sudo mkdir "$XDG_CACHE_HOME/packages"
+sudo sed -i "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
+
+
+# Install the packages
+paru -S "$(grep -Ev '^#|^$' "$HOME/nescafe-dotfiles/packagelist.txt")" --needed --noconfirm --noremovemake --batchinstall 
+
+
+# Copy the fonts
 cp -rv "$HOME/nescafe-dotfiles/fonts/*" "$HOME/.local/share/fonts"
 fc-cache -fv
 
+# Set up the .config folder
 cp -rv "$HOME/nescafe-dotfiles/config/*" "$HOME/.config"
 
-sudo sed -i "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
-
+# copy .Xresources
 cp -v "$HOME/nescafe-dotfiles/.Xresources" "$HOME/"
 
+# Copy gtk theme
 sudo cp -rf "$HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/*" /usr/share/themes
 
+# Copy lightdm settings
 sudo cp -rv "$HOME/nescafe-dotfiles/lightdm/*" /etc/lightdm/
 sudo systemctl enable lightdm.service
