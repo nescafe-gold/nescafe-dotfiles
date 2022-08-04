@@ -24,6 +24,7 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 export GEM_PATH="$XDG_DATA_HOME/ruby/gems"
 export GEM_SPEC_CACHE="$XDG_DATA_HOME/ruby/specs"
 export GEM_HOME="$XDG_DATA_HOME/ruby/gems"
+export PATH="$PATH:$GEM_HOME/bin"
 
 #Go
 export GOPATH="$XDG_DATA_HOME/go"
