@@ -9,6 +9,7 @@ local playerctl_daemon = require("signal.playerctl")
 local machi = require("modules.layout-machi")
 local helpers = require("helpers")
 local apps = require("configuration.apps")
+require("configuration.dropdown")
 
 --- Make key easier to call
 --- ~~~~~~~~~~~~~~~~~~~~~~~
