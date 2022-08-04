@@ -28,8 +28,8 @@ cp -v $HOME/nescafe-dotfiles/.zshenv $HOME/
 cp -v $HOME/nescafe-dotfiles/.Xresources $HOME/
 
 # make package build directory not tempfs because it is a massive install 
-sudo mkdir $HOME/.cache/packages
-sudo sed -i "s+BUILDDIR.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
+# sudo mkdir $HOME/.cache/packages
+# sudo sed -i "s+BUILDDIR.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
 
 # Install the packages
 paru -Sy $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --noconfirm --noremovemake --batchinstall 
