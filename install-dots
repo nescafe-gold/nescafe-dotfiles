@@ -16,6 +16,9 @@ git submodule update --remote --merge
 
 # Setup ZSH environment and .zshrc
 cp -v "$HOME/nescafe-dotfiles/.zshenv" "$HOME/"
+mkdir -p $HOME/.config
+cp -rv "$HOME/nescafe-dotfiles/config/zsh" "$HOME/.config"
+
 source "$HOME/.zshenv"
 source "$HOME/.config/zsh/.zshrc"
 
@@ -28,7 +31,7 @@ sudo sed -i "s+BUILDDIR.*+BUILDDIR=$XDG_CACHE_HOME/packages+" /etc/makepkg.conf
 
 
 # Install the packages
-paru -S "$(grep -Ev '^#|^$' "$HOME/nescafe-dotfiles/packagelist.txt")" --needed --noconfirm --noremovemake --batchinstall 
+paru -Sy $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --noconfirm --noremovemake --batchinstall 
 
 
 # Copy the fonts
