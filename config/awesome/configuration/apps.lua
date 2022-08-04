@@ -8,15 +8,15 @@ return {
     --- Default terminal emulator
     terminal = "alacritty",
     --- Default music client
-    music_player = "wezterm start --class music ncmpcpp",
+    music_player = "alacritty --class=music -e ncmpcpp",
     --- Default text editor
-    text_editor = "wezterm start $EDITOR",
+    text_editor = "alacritty -e $EDITOR",
     --- Default web browser
     web_browser = "firefox",
     --- Default file manager
-    file_manager = "wezterm cli spawn lf $HOME",
+    file_manager = "alacritty -e lf $HOME",
     --- Default network manager
-    network_manager = "wezterm start nmtui",
+    network_manager = "alacritty -e nmtui",
     --- Default bluetooth manager
     bluetooth_manager = "blueman-manager",
     --- Default power manager
