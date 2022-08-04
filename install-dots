@@ -43,7 +43,7 @@ cp -rv $HOME/nescafe-dotfiles/config/* $HOME/.config/
 
 
 # Copy gtk theme
-sudo cp -rf $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
+sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
 
 # Copy lightdm settings
 sudo cp -rv $HOME/nescafe-dotfiles/lightdm/* /etc/lightdm/
