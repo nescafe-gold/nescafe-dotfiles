@@ -1,5 +1,9 @@
 #Fonts
 ruby
+xcb-errors
+busted
+luacheck
+
 nodejs-material-design-icons
 ttf-icomoon-feather
 
