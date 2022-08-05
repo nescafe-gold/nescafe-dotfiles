@@ -1,4 +1,14 @@
 #Fonts
+multilib-devel
+fakeroot
+jshon
+wget
+make
+pkg-config
+autoconf
+automake
+patch
+libva-intel-driver
 ruby
 xcb-errors
 busted
@@ -21,7 +31,7 @@ zsh-completions
 zsh-autosuggestions
 zsh-autocomplete-git
 
-awesome-git
+awesome
 fzf
 openbsd-netcat
 exa 
