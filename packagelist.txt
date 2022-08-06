@@ -10,7 +10,6 @@ automake
 patch
 libva-intel-driver
 ruby
-xcb-errors
 busted
 luacheck
 
