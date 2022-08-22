@@ -236,3 +236,6 @@ pistol-git
 tar
 unrar
 ttf-jetbrains-mono
+
+#mpd visual wave
+timidity
