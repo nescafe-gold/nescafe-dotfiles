@@ -72,6 +72,8 @@ fc-cache -fv
 
 broot --install
 
+cp -rv $HOME/nescafe-dotfiles/scripts/updatemydots $HOME/.local/bin
+
 # Copy gtk theme
 sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
 
