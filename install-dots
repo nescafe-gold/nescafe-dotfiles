@@ -46,5 +46,10 @@ cp -rv $HOME/nescafe-dotfiles/config/* $HOME/.config/
 sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
 
 # Copy lightdm settings
-sudo cp -rv $HOME/nescafe-dotfiles/lightdm/* /etc/lightdm/
-sudo systemctl enable lightdm.service
+sudo cp -rv $HOME/nescafe-dotfiles/lightdm /etc/
+
+chmod +x $HOME/nescafe-dotfiles/update-dots
+chmod +x $HOME/nescafe-dotfiles/install-xanmod-kernel.sh
+
+
+sudo systemctl start lightdm.service
