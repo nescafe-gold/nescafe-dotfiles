@@ -18,7 +18,7 @@ local function autostart_apps()
   )
   --- Other stuff
   helpers.run.run_once_grep("blueman-applet")
-  awful.spawn.with_shell("setxkbmap -layout gb")
+  helpers.run.run_once_pgrep("setxkbmap -layout gb")
   helpers.run.run_once_pgrep("unclutter")
 end
 
