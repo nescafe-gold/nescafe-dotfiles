@@ -9,5 +9,10 @@ return {
         "", --- lon
       },
     },
+
+    --- Github activity
+    github = {
+      username = "nescafe-gold",
+    },
   },
 }

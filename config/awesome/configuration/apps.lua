@@ -1,6 +1,7 @@
 local filesystem = require("gears.filesystem")
 local config_dir = filesystem.get_configuration_dir()
 local utils_dir = config_dir .. "utilities/"
+local home_dir = filesystem.get_xdg_config_home()
 
 return {
   --- Default Applications
@@ -16,7 +17,7 @@ return {
     --- Default file manager
     file_manager = "alacritty -e lf $HOME",
     --- Default network manager
-    network_manager = "alacritty -e nmtui",
+    network_manager = os.getenv("HOME") .. "/.config/rofi/wifi/wifi",
     --- Default bluetooth manager
     bluetooth_manager = "blueman-manager",
     --- Default power manager

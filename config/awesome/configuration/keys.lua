@@ -26,6 +26,10 @@ awful.keyboard.append_global_keybindings({
     awful.screen.focused().quake:toggle()
   end, { description = "dropdown terminal", group = "app" }),
 
+  -- dashboard widget
+  awful.key({ mod }, "o", function()
+    awesome.emit_signal("central_panel::toggle", awful.screen.focused())
+  end, { description = "Toggle dashboard widget", group = "Widgets" }),
 
   --- App
   --- ~~~
@@ -35,14 +39,9 @@ awful.keyboard.append_global_keybindings({
   end, { description = "open terminal", group = "app" }),
 
   --- App launcher
-  awful.key({ mod }, "d", function()
+  awful.key({ alt }, "space", function()
     awful.spawn.with_shell(apps.default.app_launcher)
   end, { description = "open app launcher", group = "app" }),
-
-  --- Code editor
-  awful.key({ mod, shift }, "e", function()
-    awful.spawn(apps.default.code_editor)
-  end, { description = "open code editor", group = "app" }),
 
   --- File manager
   awful.key({ mod, shift }, "f", function()
@@ -53,11 +52,6 @@ awful.keyboard.append_global_keybindings({
   awful.key({ mod, shift }, "w", function()
     awful.spawn(apps.default.web_browser)
   end, { description = "open web browser", group = "app" }),
-
-  -- dashboard widget
-  awful.key({ mod }, "o", function()
-    awesome.emit_signal("central_panel::toggle", awful.screen.focused())
-  end, { description = "Toggle dashboard widget", group = "Widgets" }),
 
   --- WM
   --- ~~
@@ -72,11 +66,7 @@ awful.keyboard.append_global_keybindings({
 
   --- Client
   --- ~~~~~~
-  awful.key({ mod, shift }, "f",
-    function()
-      bling.module.flash_focus.flashfocus(client.focus)
-    end, { description = "flash focused window", group = "client" }),
-
+  --- Focus client by direction
   awful.key({ mod }, "k", function()
     awful.client.focus.bydirection("up")
     bling.module.flash_focus.flashfocus(client.focus)
@@ -111,7 +101,6 @@ awful.keyboard.append_global_keybindings({
     bling.module.flash_focus.flashfocus(client.focus)
   end, { description = "focus right", group = "client" }),
 
-
   --- Resize focused client
   awful.key({ mod, ctrl }, "k", function(c)
     helpers.client.resize_client(client.focus, "up")
@@ -139,7 +128,6 @@ awful.keyboard.append_global_keybindings({
     helpers.client.resize_client(client.focus, "right")
   end, { description = "resize to the right", group = "client" }),
 
-
   --- Bling
   --- ~~~~~
   --- Add client to tabbed layout
@@ -164,8 +152,6 @@ awful.keyboard.append_global_keybindings({
     awful.spawn.with_shell(apps.default.music_player)
   end, { description = "open music client", group = "hotkeys" }),
 
-
-
   --- Brightness Control
   awful.key({}, "XF86MonBrightnessUp", function()
     awful.spawn("brightnessctl set 5%+ -q", false)
@@ -180,17 +166,17 @@ awful.keyboard.append_global_keybindings({
 
   --- Volume control
   awful.key({}, "XF86AudioRaiseVolume", function()
-    awful.spawn("pamixer -i 5", false)
+    awful.spawn("amixer sset Master 5%+", false)
     awesome.emit_signal("widget::volume")
     awesome.emit_signal("module::volume_osd:show", true)
   end, { description = "increase volume", group = "hotkeys" }),
   awful.key({}, "XF86AudioLowerVolume", function()
-    awful.spawn("pamixer -d 5", false)
+    awful.spawn("amixer sset Master 5%-", false)
     awesome.emit_signal("widget::volume")
     awesome.emit_signal("module::volume_osd:show", true)
   end, { description = "decrease volume", group = "hotkeys" }),
   awful.key({}, "XF86AudioMute", function()
-    awful.spawn("pamixer -t", false)
+    awful.spawn("amixer sset Master toggle", false)
   end, { description = "mute volume", group = "hotkeys" }),
 
   --- Music
@@ -330,27 +316,27 @@ client.connect_signal("request::default_keybindings", function()
     --- Keep on top
     awful.key({ mod }, "p", function(c)
       c.ontop = not c.ontop
-    end),
+    end, { description = "keep on top", group = "client" }),
 
     --- Sticky
     awful.key({ mod, shift }, "p", function(c)
       c.sticky = not c.sticky
-    end),
+    end, { description = "make sticky", group = "client" }),
 
     --- Close window
     awful.key({ mod }, "q", function()
       client.focus:kill()
-    end),
+    end, { description = "kill client", group = "client" }),
 
     --- Center window
     awful.key({ mod }, "c", function()
       awful.placement.centered(c, { honor_workarea = true, honor_padding = true })
-    end),
+    end, { description = "center floating window", group = "client" }),
 
     --- Window switcher
     awful.key({ alt }, "Tab", function()
       awesome.emit_signal("window_switcher::turn_on")
-    end),
+    end, { description = "switch windows", group = "client" }),
   })
 end)
 

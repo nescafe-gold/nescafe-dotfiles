@@ -24,7 +24,6 @@ export XDG_VIDEOS_DIR="$HOME/Videos"
 export GEM_PATH="$XDG_DATA_HOME/ruby/gems"
 export GEM_SPEC_CACHE="$XDG_DATA_HOME/ruby/specs"
 export GEM_HOME="$XDG_DATA_HOME/ruby/gems"
-export PATH="$PATH:$XDG_DATA_HOME/gem/ruby/3.0.0/bin"
 export PATH="$PATH:$GEM_HOME/bin"
 
 #Go
@@ -48,8 +47,10 @@ export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts/useful:$PATH"
 export PATH="$HOME/scripts/statusbar:$PATH"
+export PATH=$HOME/.config/rofi/scripts:$PATH
 
-export TERMINAL="wezterm"
+
+export TERMINAL="alacritty"
 export EDITOR="lvim"
 export READER="zathura"
 export VISUAL="lvim"
@@ -79,7 +80,7 @@ if [ $(echo $MANPAGER | awk '{print $1}') = nvim ]; then
 fi
 
 # ZSH
-export fpath=(/home/aidan/.config/zsh/zsh-completions $fpath)
+export fpath=($HOME/.config/zsh/zsh-completions $fpath)
 export HISTFILE="$XDG_CONFIG_HOME/zsh/history"
 export HISTSIZE=10000
 export SAVEHIST=10000
