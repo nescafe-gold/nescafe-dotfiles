@@ -261,12 +261,12 @@ return function(s)
           tag_list(s),
           {
             system_tray(),
-            volume_widget {
-              widget_type = 'arc',
-              device = 'pipewire',
-              step = '5',
-              mixer_cmd = 'pavucontrol'
-            },
+            -- volume_widget {
+            --   widget_type = 'arc',
+            --   device = 'pipewire',
+            --   step = '5',
+            --   mixer_cmd = 'pavucontrol'
+            -- },
             s.battery,
             s.network,
             notif_panel(),
