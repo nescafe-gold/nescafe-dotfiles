@@ -33,6 +33,7 @@ fc-cache -fv
 # Set up the .config folder
 cp -rv $HOME/nescafe-dotfiles/config/ $HOME/.config
 
+broot --install
 
 # Copy gtk theme
 sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
