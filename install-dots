@@ -51,5 +51,6 @@ sudo cp -rv $HOME/nescafe-dotfiles/lightdm /etc/
 chmod +x $HOME/nescafe-dotfiles/update-dots
 chmod +x $HOME/nescafe-dotfiles/install-xanmod-kernel.sh
 
+touch $HOME/.config/zsh/history
 
 sudo systemctl start lightdm.service
