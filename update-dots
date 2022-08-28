@@ -40,7 +40,7 @@ input_print "Are you using a laptop or a desktop? (Any option other than d or D 
 read -r laptop_response
 if ! [[ "${laptop_response,,}" =~ ^(d|D)$ ]]
 then
-    continue
+    info_print "You chose laptop. Battery widget has been added to top bar and terminal font size is 10"
 else
     info_print "Disabling battery module from panel"
     sed -i 's/^[^--]*s.battery*/--&/' $HOME/.config/awesome/ui/panels/top-panel/init.lua
@@ -52,7 +52,7 @@ input_print "Does your device have wifi? (Any option other than n or N will choo
 read -r wifi_response
 if ! [[ "${wifi_response,,}" =~ ^(n|N)$ ]]
 then
-    continue
+    info_print "You chose laptop. Wifi widget has been added to the top bar"
 else
     info_print "Disabling wifi module from panel"
     sed -i 's/^[^--]*s.network*/--&/' $HOME/.config/awesome/ui/panels/top-panel/init.lua
