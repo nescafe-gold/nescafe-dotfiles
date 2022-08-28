@@ -240,3 +240,4 @@ ttf-jetbrains-mono
 #mpd visual wave
 timidity
 signal-desktop-beta
+lobster
