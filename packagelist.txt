@@ -12,7 +12,7 @@ libva-intel-driver
 ruby
 busted
 luacheck
-
+awesome-git
 nodejs-material-design-icons
 ttf-icomoon-feather
 
@@ -30,7 +30,6 @@ zsh-completions
 zsh-autosuggestions
 zsh-autocomplete-git
 
-awesome
 fzf
 openbsd-netcat
 exa 
