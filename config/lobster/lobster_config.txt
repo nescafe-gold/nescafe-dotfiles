@@ -1,0 +1,2 @@
+player=mpv
+subs_language=English

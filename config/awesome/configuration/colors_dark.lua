@@ -1,0 +1,15 @@
+return {
+  background = "#161819",
+  background_alt_1 = "#1f2122",
+  background_alt_2 = "#121415",
+  forgeround = "#b8cca3",
+  forgeround_alt_1 = "#91998a",
+  forgeround_alt_2 = "#60665c",
+  red = "#a63232",
+  yellow = "#a6a632",
+  orange = "#a66c32",
+  green = "#6ca632",
+  cyan = "#32a6a6",
+  blue = "#3262a6",
+  purple = "#4532a6",
+}
