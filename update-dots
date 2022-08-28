@@ -80,4 +80,4 @@ sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/theme
 
 # Copy lightdm settings
 sudo cp -rv $HOME/nescafe-dotfiles/lightdm/* /etc/lightdm/
-systemctl enable systemctl lightdm.service
+systemctl enable lightdm.service
