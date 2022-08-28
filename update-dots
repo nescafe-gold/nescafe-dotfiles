@@ -31,7 +31,7 @@ cp -rv $HOME/nescafe-dotfiles/fonts/* $HOME/.local/share/fonts/
 fc-cache -fv
 
 # Set up the .config folder
-cp -rv $HOME/nescafe-dotfiles/config/ $HOME/.config
+cp -rv $HOME/nescafe-dotfiles/config/* $HOME/.config/
 
 broot --install
 
@@ -39,4 +39,4 @@ broot --install
 sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
 
 # Copy lightdm settings
-sudo cp -rv $HOME/nescafe-dotfiles/lightdm /etc/
+sudo cp -rv $HOME/nescafe-dotfiles/lightdm/* /etc/lightdm/
