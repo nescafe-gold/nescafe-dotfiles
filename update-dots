@@ -1,5 +1,41 @@
 #!/bin/bash
 
+
+# Pretty print (function).
+info_print () {
+    echo -e "${BOLD}${BGREEN}[ ${BYELLOW}•${BGREEN} ] $1${RESET}"
+}
+
+# Pretty print for input (function).
+input_print () {
+    echo -ne "${BOLD}${BYELLOW}[ ${BGREEN}•${BYELLOW} ] $1${RESET}"
+}
+
+# Alert user of bad input (function).
+error_print () {
+    echo -e "${BOLD}${BRED}[ ${BBLUE}•${BRED} ] $1${RESET}"
+}
+
+
+input_print "Are you using a laptop or a desktop? (Any option other than d or D will choose laptop)? [l/d]?: "
+read -r laptop_response
+if ! [[ "${laptop_response,,}" =~ ^(d|D)$ ]]
+then
+    continue
+else
+    sed -i 's/^[^--]*s.battery*/--&/' ~/.config/awesome/ui/panels/top-panel/init.lua
+fi
+
+input_print "Does your device have wifi? (Any option other than n or N will choose yes)? [y/n]?: "
+read -r wifi_response
+if ! [[ "${wifi_response,,}" =~ ^(n|N)$ ]]
+then
+    continue
+else
+    sed -i 's/^[^--]*s.network*/--&/' ~/.config/awesome/ui/panels/top-panel/init.lua
+fi
+
+
 # CD into dotfiles and initialise the git submodules
 cd "$HOME/nescafe-dotfiles"
 git submodule init
