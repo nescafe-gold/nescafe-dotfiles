@@ -44,6 +44,8 @@ then
 else
     info_print "Disabling battery module from panel"
     sed -i 's/^[^--]*s.battery*/--&/' $HOME/.config/awesome/ui/panels/top-panel/init.lua
+    info_print "Changing terminal font size from 10 to 12"
+    sed -i 's/size: 10/size: 12/' $HOME/.config/alacritty/fonts.yml
 fi
 
 input_print "Does your device have wifi? (Any option other than n or N will choose yes)? [y/n]?: "
@@ -57,8 +59,6 @@ else
 fi
 
 
-
-
 # make package build directory not tempfs because it is a massive install 
 # sudo mkdir $HOME/.cache/packages
 # sudo sed -i "s+BUILDDIR.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
@@ -69,8 +69,6 @@ paru -Sy $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --n
 # Copy the fonts
 cp -rv $HOME/nescafe-dotfiles/fonts/* $HOME/.local/share/fonts/
 fc-cache -fv
-
-
 
 broot --install
 
