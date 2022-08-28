@@ -1,8 +1,8 @@
 #!/bin/bash
-
+[ -d "$XDG_CACHE_HOME/nescafe-dotfiles" ] && rm -rf "$XDG_CACHE_HOME/nescafe-dotfiles"
 git clone https://github.com/nescafe-gold/nescafe-dotfiles "$XDG_CACHE_HOME/nescafe-dotfiles"
 cd "$XDG_CACHE_HOME/nescafe-dotfiles"
+
+
 chmod +x "$XDG_CACHE_HOME/nescafe-dotfiles/update-dots"
 bash "$XDG_CACHE_HOME/nescafe-dotfiles/update-dots"
-
-rm -rf "$XDG_CACHE_HOME/nescafe-dotfiles"
