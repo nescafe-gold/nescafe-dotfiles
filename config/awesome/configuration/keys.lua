@@ -11,6 +11,7 @@ local helpers = require("helpers")
 local apps = require("configuration.apps")
 require("configuration.dropdown")
 
+
 --- Make key easier to call
 --- ~~~~~~~~~~~~~~~~~~~~~~~
 mod = "Mod4"
@@ -21,6 +22,10 @@ shift = "Shift"
 --- Global key bindings
 --- ~~~~~~~~~~~~~~~~~~~
 awful.keyboard.append_global_keybindings({
+
+  awful.key({ mod, shift }, "f", function()
+    bling.module.flash_focus.flashfocus(client.focus)
+  end, { description = "flash focused window", group = "app" }),
 
   awful.key({ mod }, "z", function()
     awful.screen.focused().quake:toggle()
@@ -44,7 +49,7 @@ awful.keyboard.append_global_keybindings({
   end, { description = "open app launcher", group = "app" }),
 
   --- File manager
-  awful.key({ mod, shift }, "f", function()
+  awful.key({ mod, alt }, "f", function()
     awful.spawn(apps.default.file_manager)
   end, { description = "open file manager", group = "app" }),
 
