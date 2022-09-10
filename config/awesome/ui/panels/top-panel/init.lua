@@ -124,9 +124,9 @@ return function(s)
         margins = { left = dpi(10), right = dpi(10) },
         widget = wibox.container.margin,
       },
-      on_release = function()
-        awesome.emit_signal("central_panel::toggle", s)
-      end,
+      -- on_release = function()
+      --   awesome.emit_signal("central_panel::toggle", s)
+      -- end,
     })
 
     return wibox.widget({
