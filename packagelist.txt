@@ -240,3 +240,4 @@ ttf-jetbrains-mono
 timidity
 signal-desktop-beta
 lobster
+libnm
