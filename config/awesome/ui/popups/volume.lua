@@ -188,3 +188,4 @@ awesome.connect_signal("module::volume_osd:show", function(bool)
     end
   end
 end)
+
