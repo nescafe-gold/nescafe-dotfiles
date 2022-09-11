@@ -64,7 +64,7 @@ else
 fi
 
 info_print "Cheking if picom-ibhagwan-git is installed"
-if [ $(isPackageInstalled 'modprobed-db') ]; then 
+if [ $(isPackageInstalled 'picom-ibhagwan-git') ]; then 
   info_print "removing picom-ibhagwan-git"
   paru -Rns picom-ibhagwan-git --noconfirm
 fi
