@@ -66,7 +66,7 @@ fi
 info_print "Cheking if picom-ibhagwan-git is installed"
 if [ $(isPackageInstalled 'modprobed-db') ]; then 
   info_print "removing picom-ibhagwan-git"
-  paru -Rns picom-ibhagwan-git
+  paru -Rns picom-ibhagwan-git --noconfirm
 fi
 
 # make package build directory not tempfs because it is a massive install 
