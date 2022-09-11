@@ -74,7 +74,7 @@ fi
 # sudo sed -i "s+BUILDDIR.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
 
 # Install the packages
-paru -Syu $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --noconfirm --noremovemake --batchinstall 
+paru -Sy $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --noconfirm --noremovemake --batchinstall 
 
 # Copy the fonts
 cp -rv $HOME/nescafe-dotfiles/fonts/* $HOME/.local/share/fonts/
