@@ -169,7 +169,6 @@ texlive-science
 spaceship-prompt-git
 picom-jonaburg-git
 
-
 papirus-folders-nordic
 papirus-icon-theme
 lightdm
