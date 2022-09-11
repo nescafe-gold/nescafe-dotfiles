@@ -15,6 +15,11 @@ error_print () {
     echo -e "${BOLD}${BRED}[ ${BBLUE}•${BRED} ] $1${RESET}"
 }
 
+isPackageInstalled() {
+  pacman -Qi "$packageName" &> /dev/null
+  echo $?
+}
+
 # CD into dotfiles and initialise the git submodules
 cd "$HOME/nescafe-dotfiles"
 git submodule init
@@ -58,6 +63,11 @@ else
     sed -i 's/^[^--]*s.network*/--&/' $HOME/.config/awesome/ui/panels/top-panel/init.lua
 fi
 
+info_print "Cheking if picom-ibhagwan-git is installed"
+if [ $(isPackageInstalled 'modprobed-db') ]; then 
+  info_print "removing picom-ibhagwan-git"
+  paru -Rns picom-ibhagwan-git
+fi
 
 # make package build directory not tempfs because it is a massive install 
 # sudo mkdir $HOME/.cache/packages
@@ -83,5 +93,6 @@ sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/theme
 
 # Copy lightdm settings
 sudo cp -rv $HOME/nescafe-dotfiles/lightdm/* /etc/lightdm/
+
 
 
