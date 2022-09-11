@@ -44,7 +44,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts/eww:$PATH"
 export PATH="$HOME/scripts:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/scripts/useful:$PATH"
 export PATH="$HOME/scripts/statusbar:$PATH"
 export PATH=$HOME/.config/rofi/scripts:$PATH
@@ -302,6 +301,5 @@ export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 1) # red
 export LESS_TERMCAP_ue=$(tput sgr0)
 # End bold, blinking, standout, underline
 export LESS_TERMCAP_me=$(tput sgr0)
-
 
 # vim:ft=zsh:nowrap
