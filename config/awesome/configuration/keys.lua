@@ -22,6 +22,15 @@ shift = "Shift"
 --- ~~~~~~~~~~~~~~~~~~~
 awful.keyboard.append_global_keybindings({
 
+  awful.key({ mod }, "p", function()
+    for s in screen do
+      s.mywibox.visible = not s.mywibox.visible
+      if s.mybottomwibox then
+        s.mybottomwibox.visible = not s.mybottomwibox.visible
+      end
+    end
+  end, { description = "toggle panel", group = "hotkeys" }),
+
   awful.key({ mod }, "z", function()
     awful.screen.focused().quake:toggle()
   end, { description = "dropdown terminal", group = "app" }),
