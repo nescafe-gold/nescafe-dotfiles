@@ -52,7 +52,7 @@ input_print "Does your device have wifi? (Any option other than n or N will choo
 read -r wifi_response
 if ! [[ "${wifi_response,,}" =~ ^(n|N)$ ]]
 then
-    info_print "You chose laptop. Wifi widget has been added to the top bar"
+    info_print "You chose wifi. Wifi widget has been added to the top bar"
 else
     info_print "Disabling wifi module from panel"
     sed -i 's/^[^--]*s.network*/--&/' $HOME/.config/awesome/ui/panels/top-panel/init.lua
@@ -64,7 +64,7 @@ fi
 # sudo sed -i "s+BUILDDIR.*+BUILDDIR=$HOME/.cache/packages+" /etc/makepkg.conf
 
 # Install the packages
-paru -Sy $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --noconfirm --noremovemake --batchinstall 
+paru -Syu $(grep -Ev '^#|^$' $HOME/nescafe-dotfiles/packagelist.txt) --needed --noconfirm --noremovemake --batchinstall 
 
 # Copy the fonts
 cp -rv $HOME/nescafe-dotfiles/fonts/* $HOME/.local/share/fonts/
