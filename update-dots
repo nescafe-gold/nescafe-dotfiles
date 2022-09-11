@@ -75,9 +75,13 @@ broot --install
 cp -rv $HOME/nescafe-dotfiles/scripts/updatemydots $HOME/.local/bin
 chmod +x $HOME/.local/bin/updatemydots
 
+cp -rv $HOME/nescafe-dotfiles/scripts/install_music_and_create_playlist $HOME/.local/bin
+chmod +x $HOME/.local/bin/install_music_and_create_playlist
+
 # Copy gtk theme
 sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
 
 # Copy lightdm settings
 sudo cp -rv $HOME/nescafe-dotfiles/lightdm/* /etc/lightdm/
-systemctl enable lightdm.service
+
+
