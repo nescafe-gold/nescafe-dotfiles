@@ -89,7 +89,7 @@ cp -rv ./scripts/install_music_and_create_playlist $HOME/.local/bin
 chmod +x $HOME/.local/bin/install_music_and_create_playlist
 
 # Copy gtk theme
-sudo cp -rv $HOME/nescafe-dotfiles/themes/gtk/Aesthetic-Night/* /usr/share/themes
+sudo cp -rv ./themes/gtk/Aesthetic-Night/* /usr/share/themes
 
 # Copy lightdm settings
 sudo cp -rv ./lightdm/* /etc/lightdm/
